@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => props.$columns};
-  grid-auto-flow: row auto;
+  /* grid-auto-flow: row auto; */
   gap: ${(props) => props.$gap};
   align-items: center;
   transition: none;

@@ -13,6 +13,7 @@ import { GiReceiveMoney } from 'react-icons/gi';
 import { VscTools } from 'react-icons/vsc';
 const StyledFeaturesSection = styled.div`
   padding: 12rem 0rem;
+  background-color: var(--color-white);
 `;
 
 const FeaturesContainer = styled.div`
@@ -20,8 +21,8 @@ const FeaturesContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: row auto;
   gap: 3.2rem;
-  align-items: center;
-  align-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
 
   @media (max-width: 850px) {
     /* grid-row: 2/3; */
@@ -34,15 +35,20 @@ const FeaturesContainer = styled.div`
 
 const FeaturesBox = styled.div`
   padding: 2.4rem 3.2rem;
-  background-color: var(--color-white);
+  background-color: var(--color-primary-light);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  min-width: 30rem;
+  min-width: 31.5rem;
   gap: 1.2rem;
   box-shadow: 0 0.5rem 1rem var(--shadow-lightest);
   align-self: stretch;
   /* justify-self: stretch; */
+  @media (max-width: 850px) {
+    /* height: 25.5rem; */
+    /* align-self: center; */
+    /* flex-grow: 1; */
+  }
 `;
 
 const FeaturesPhoto = styled.img`
@@ -56,8 +62,8 @@ const FeaturesPhoto = styled.img`
     width: 25rem;
   }
   @media (max-width: 850px) {
-    height: 50rem;
-    width: 35rem;
+    height: 45rem;
+    width: 30rem;
   }
 `;
 
@@ -73,11 +79,11 @@ const FeaturesTitle = styled.span`
 `;
 
 const FeatureDescription = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   /* font-weight: 500; */
   letter-spacing: 1.5px;
   line-height: 1.75;
-  color: var(--color-grey-dark--1);
+  color: var(--color-grey-dark--2);
   /* text-align: center; */
 `;
 

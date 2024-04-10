@@ -14,7 +14,7 @@ const StyledAboutSection = styled.section`
   padding: 12rem 0;
 `;
 const AboutDescription = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.8;
@@ -57,7 +57,7 @@ function AboutSection() {
   return (
     <StyledAboutSection>
       <Container>
-        <Grid columns='1fr 1fr' margin='0 0 4.8rem 0'>
+        <Grid columns='1fr 1fr' margin='0 0 4.8rem 0' gap='0 4.4rem'>
           <Row size='tiny'>
             <Heading as='h4' variation='accent'>
               Scopul
@@ -70,7 +70,7 @@ function AboutSection() {
             promptitudinea si siguranta serviciilor.
           </AboutDescription>
         </Grid>
-        <Grid columns='1fr 1fr' gap='5.6rem 0'>
+        <Grid columns='1fr 1fr' gap='0 4.4rem'>
           <AboutPhoto src={aboutPhoto}></AboutPhoto>
           <AboutUsList>
             <AboutUsBullet>

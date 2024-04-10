@@ -13,7 +13,7 @@ const StyledHeroSection = styled.div`
 `;
 const HeroSectionLeft = styled.div`
   flex: 0 1 65%;
-  padding: 6vw 12vw;
+  padding: 6vw 12vw 6vw 9.6vw;
 
   @media (max-width: 850px) {
     padding: 6vw 15vw 6vw 4vw;

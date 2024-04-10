@@ -15,9 +15,26 @@ const sizes = {
 const Row = styled.div`
   display: flex;
   ${(props) =>
-    props.justify === 'yes' &&
+    props.justifyContent !== '' &&
     css`
-      justify-content: space-between;
+      justify-content: ${(props) => props.justifyContent};
+    `}
+  ${(props) =>
+    props.justify !== '' &&
+    css`
+      justify-items: ${(props) => props.justify};
+    `}
+
+  ${(props) =>
+    props.align !== '' &&
+    css`
+      /* flex-wrap: nowrap; */
+      align-content: ${(props) => props.align};
+    `}
+  ${(props) =>
+    props.alignContent !== '' &&
+    css`
+      align-content: ${(props) => props.alignContent};
     `}
   ${(props) => sizes[props.size]};
   ${(props) =>
@@ -31,6 +48,13 @@ const Row = styled.div`
       flex-direction: column;
     `};
 `;
-Row.defaultProps = { type: 'vertical', size: 'medium', justify: 'no' };
+Row.defaultProps = {
+  type: 'vertical',
+  size: 'medium',
+  justify: '',
+  align: '',
+  justifyContent: 'no',
+  alignContent: 'no',
+};
 
 export default Row;
