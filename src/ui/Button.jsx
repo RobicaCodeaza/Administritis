@@ -36,7 +36,7 @@ const variations = {
   `,
   secondary: css`
     color: var(--color-primary-dark);
-    background: var(--color-primary-light);
+    background: var(--color-white);
     border: 1px solid var(--color-accent1);
     text-transform: uppercase;
 

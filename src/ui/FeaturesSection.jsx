@@ -11,6 +11,7 @@ import { RiCheckboxMultipleFill } from 'react-icons/ri';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { VscTools } from 'react-icons/vsc';
+import Button from './Button.jsx';
 const StyledFeaturesSection = styled.div`
   padding: 12rem 0rem;
   background-color: var(--color-white);
@@ -41,7 +42,7 @@ const FeaturesBox = styled.div`
   flex-direction: column;
   min-width: 31.5rem;
   gap: 1.2rem;
-  box-shadow: 0 0.5rem 1rem var(--shadow-lightest);
+  /* box-shadow: 0 0.5rem 1rem var(--shadow-lightest); */
   align-self: stretch;
   /* justify-self: stretch; */
   @media (max-width: 850px) {
@@ -104,67 +105,73 @@ function FeaturesSection() {
           <Row></Row>
         </Grid>
         <Grid columns='1fr 1fr'>
-          <FeaturesContainer>
-            <FeaturesBox>
-              <Row type='horizontal' size='medium'>
-                <IconBackground color='#C2D9FF' size='large'>
-                  <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
-                    <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
-                  </Icon>
-                </IconBackground>
-                <FeaturesTitle>Adminstrare Completa</FeaturesTitle>
-              </Row>
-              <FeatureDescription>
-                Un pachet complet ce include{' '}
-                <strong style={{ fontSize: '1.4rem' }}>Contabilitatea</strong>+
-                <strong style={{ fontSize: '1.4rem' }}>
-                  Administrarea tehnica
-                </strong>
-                +<strong style={{ fontSize: '1.4rem' }}>Casierie</strong>.
-              </FeatureDescription>
-            </FeaturesBox>
-            <FeaturesBox>
-              <Row type='horizontal' size='medium'>
-                <IconBackground color='#C2D9FF' size='large'>
-                  <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
-                    <IoDocumentTextOutline></IoDocumentTextOutline>
-                  </Icon>
-                </IconBackground>
-                <FeaturesTitle>Contabilitate</FeaturesTitle>
-              </Row>
-              <FeatureDescription>
-                Rezolvarea aspectelor financiare intr-un mod sigur si
-                transparent.
-              </FeatureDescription>
-            </FeaturesBox>
-            <FeaturesBox>
-              <Row type='horizontal' size='medium'>
-                <IconBackground color='#C2D9FF' size='large'>
-                  <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
-                    <GiReceiveMoney></GiReceiveMoney>
-                  </Icon>
-                </IconBackground>
-                <FeaturesTitle>Casierie</FeaturesTitle>
-              </Row>
-              <FeatureDescription>
-                Colectarea si inregistrarea platilor corespunzatoare fiecarui
-                imobil.
-              </FeatureDescription>
-            </FeaturesBox>
-            <FeaturesBox>
-              <Row type='horizontal' size='medium'>
-                <IconBackground color='#C2D9FF' size='large'>
-                  <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
-                    <VscTools></VscTools>
-                  </Icon>
-                </IconBackground>
-                <FeaturesTitle>Adminstrare Tehnica</FeaturesTitle>
-              </Row>
-              <FeatureDescription>
-                Asigurarea intretinerii si functionarii optime a imobilelor.
-              </FeatureDescription>
-            </FeaturesBox>
-          </FeaturesContainer>
+          <Row align='start' size='big'>
+            <FeaturesContainer>
+              <FeaturesBox>
+                <Row type='horizontal' size='medium'>
+                  <IconBackground color='#C2D9FF' size='large'>
+                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                      <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
+                    </Icon>
+                  </IconBackground>
+                  <FeaturesTitle>Adminstrare Completa</FeaturesTitle>
+                </Row>
+                <FeatureDescription>
+                  Un pachet complet ce include{' '}
+                  <strong style={{ fontSize: '1.4rem' }}>Contabilitatea</strong>
+                  +
+                  <strong style={{ fontSize: '1.4rem' }}>
+                    Administrarea tehnica
+                  </strong>
+                  +<strong style={{ fontSize: '1.4rem' }}>Casierie</strong>.
+                </FeatureDescription>
+              </FeaturesBox>
+              <FeaturesBox>
+                <Row type='horizontal' size='medium'>
+                  <IconBackground color='#C2D9FF' size='large'>
+                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                      <IoDocumentTextOutline></IoDocumentTextOutline>
+                    </Icon>
+                  </IconBackground>
+                  <FeaturesTitle>Contabilitate</FeaturesTitle>
+                </Row>
+                <FeatureDescription>
+                  Rezolvarea aspectelor financiare intr-un mod sigur si
+                  transparent.
+                </FeatureDescription>
+              </FeaturesBox>
+              <FeaturesBox>
+                <Row type='horizontal' size='medium'>
+                  <IconBackground color='#C2D9FF' size='large'>
+                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                      <GiReceiveMoney></GiReceiveMoney>
+                    </Icon>
+                  </IconBackground>
+                  <FeaturesTitle>Casierie</FeaturesTitle>
+                </Row>
+                <FeatureDescription>
+                  Colectarea si inregistrarea platilor corespunzatoare fiecarui
+                  imobil.
+                </FeatureDescription>
+              </FeaturesBox>
+              <FeaturesBox>
+                <Row type='horizontal' size='medium'>
+                  <IconBackground color='#C2D9FF' size='large'>
+                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                      <VscTools></VscTools>
+                    </Icon>
+                  </IconBackground>
+                  <FeaturesTitle>Adminstrare Tehnica</FeaturesTitle>
+                </Row>
+                <FeatureDescription>
+                  Asigurarea intretinerii si functionarii optime a imobilelor.
+                </FeatureDescription>
+              </FeaturesBox>
+            </FeaturesContainer>
+            <Button variation='secondary' to='servicii'>
+              Mai multe detalii
+            </Button>
+          </Row>
           <FeaturesPhoto src={featuresPhoto}></FeaturesPhoto>
         </Grid>
       </Container>

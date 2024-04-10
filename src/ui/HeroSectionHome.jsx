@@ -13,7 +13,7 @@ const StyledHeroSection = styled.div`
 `;
 const HeroSectionLeft = styled.div`
   flex: 0 1 65%;
-  padding: 6vw 12vw 6vw 9.6vw;
+  padding: 6vw 13vw 6vw 9.6vw;
 
   @media (max-width: 850px) {
     padding: 6vw 15vw 6vw 4vw;
@@ -40,8 +40,10 @@ const HeroMainImgBox = styled.div`
   left: -50%;
   top: 50%;
   transform: translate(5vw, -50%);
-  height: 30vw;
+  /* height: 30vw;
+  width: 30vw; */
   width: 30vw;
+  height: 30vw;
   box-shadow: 0 0.75rem 1.5rem 0 var(--shadow);
 
   &::after {

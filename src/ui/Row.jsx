@@ -10,6 +10,12 @@ const sizes = {
   medium: css`
     gap: 1.6rem;
   `,
+  big: css`
+    gap: 3.2rem;
+  `,
+  huge: css`
+    gap: 4.4rem;
+  `,
 };
 
 const Row = styled.div`
@@ -29,7 +35,7 @@ const Row = styled.div`
     props.align !== '' &&
     css`
       /* flex-wrap: nowrap; */
-      align-content: ${(props) => props.align};
+      align-items: ${(props) => props.align};
     `}
   ${(props) =>
     props.alignContent !== '' &&
@@ -53,8 +59,8 @@ Row.defaultProps = {
   size: 'medium',
   justify: '',
   align: '',
-  justifyContent: 'no',
-  alignContent: 'no',
+  justifyContent: '',
+  alignContent: '',
 };
 
 export default Row;

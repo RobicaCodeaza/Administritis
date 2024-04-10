@@ -3,24 +3,53 @@ import Container from './Container.jsx';
 import Grid from './Grid.jsx';
 import Heading from './Heading.jsx';
 import Row from './Row.jsx';
+import photo1 from '/assets/intalnire.jpg';
+import photo2 from '/assets/elaborare.jpg';
+import photo3 from '/assets/implementare.jpg';
+import photo4 from '/assets/monitorizare.jpg';
 
 const StyledHowWeWorkSection = styled.div`
-  padding: 12rem 0rem;
+  padding: 12rem 0rem 25rem 0;
   /* background-color: var(--color-white); */
 `;
 
 const StepList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 4.4rem;
 `;
 
 const StepItem = styled.div`
   display: flex;
   gap: 2.4rem;
-  /* justify-content: center; */
-  /* width: 100; */
-  /* flex-direction: column; */
+  position: relative;
+  /* border-right: 1px solid var(--color-accent1); */
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  /* overflow: hidden; */
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 10rem;
+    /* background-color: */
+    box-shadow: 0 1rem 2.5rem 0.2rem var(--shadow-lightest);
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 1px;
+    background-color: transparent;
+    box-shadow: 1rem 0 2.5rem 0.2rem var(--shadow-lightest);
+  }
 `;
 const SpacedStepItem = styled(StepItem)`
   margin-left: 22.4rem;
@@ -29,7 +58,6 @@ const SpacedStepItem = styled(StepItem)`
 const ItemPhoto = styled.img`
   height: 20rem;
   width: 20rem;
-  border-radius: 0.5rem;
   object-fit: cover;
 `;
 const ItemStep = styled.div`
@@ -63,7 +91,7 @@ function HowWeWorkSection() {
         </Grid>
         <StepList>
           <StepItem>
-            <ItemPhoto></ItemPhoto>
+            <ItemPhoto src={photo1}></ItemPhoto>
             <Row size='small' justifyContent='center'>
               <ItemStep>Pasul 1</ItemStep>
               <ItemTitle>Întâlnirea inițială</ItemTitle>
@@ -74,7 +102,7 @@ function HowWeWorkSection() {
             </Row>
           </StepItem>
           <SpacedStepItem>
-            <ItemPhoto></ItemPhoto>
+            <ItemPhoto src={photo2}></ItemPhoto>
             <Row size='small' justifyContent='center'>
               <ItemStep>Pasul 2</ItemStep>
               <ItemTitle>Elaborarea planului</ItemTitle>
@@ -85,7 +113,7 @@ function HowWeWorkSection() {
             </Row>
           </SpacedStepItem>
           <StepItem>
-            <ItemPhoto></ItemPhoto>
+            <ItemPhoto src={photo3}></ItemPhoto>
             <Row size='small' justifyContent='center'>
               <ItemStep>Pasul 3</ItemStep>
               <ItemTitle>Implementarea planului</ItemTitle>
@@ -96,7 +124,7 @@ function HowWeWorkSection() {
             </Row>
           </StepItem>
           <SpacedStepItem>
-            <ItemPhoto></ItemPhoto>
+            <ItemPhoto src={photo4}></ItemPhoto>
             <Row size='small' justifyContent='center'>
               <ItemStep>Pasul 4</ItemStep>
               <ItemTitle>Monitorizare</ItemTitle>
