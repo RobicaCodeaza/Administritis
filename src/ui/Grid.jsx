@@ -8,11 +8,12 @@ const StyledGrid = styled.div`
   align-items: center;
   transition: none;
   margin: ${(props) => (props.$margin ? props.$margin : 0)};
+  ${(props) => (props.media ? props.media : '')}
 `;
 
 function Grid({ children, columns, margin, gap, media }) {
   return (
-    <StyledGrid $columns={columns} $margin={margin} $gap={gap}>
+    <StyledGrid $columns={columns} $margin={margin} $gap={gap} media={media}>
       {children}
     </StyledGrid>
   );

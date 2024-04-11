@@ -77,11 +77,10 @@ const HeroMainImgBox = styled.div`
 `;
 const HeroImg = styled.img`
   width: 100%;
-
   height: 100%;
   object-fit: cover;
   position: relative;
-  border-radius: .;
+  border-radius: 0.25rem;
 `;
 
 const HeroContent = styled.div`

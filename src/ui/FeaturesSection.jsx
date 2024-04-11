@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Grid from './Grid.jsx';
 import Row from './Row.jsx';
 import Heading from './Heading.jsx';
@@ -66,6 +66,9 @@ const FeaturesPhoto = styled.img`
     height: 45rem;
     width: 30rem;
   }
+  @media (max-width: 600px) {
+    grid-row: 1/2;
+  }
 `;
 
 const FeaturesTitle = styled.span`
@@ -88,6 +91,14 @@ const FeatureDescription = styled.p`
   /* text-align: center; */
 `;
 
+const gridMedia = css`
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 4.4rem;
+  }
+`;
+
 function FeaturesSection() {
   return (
     <StyledFeaturesSection>
@@ -104,7 +115,7 @@ function FeaturesSection() {
           </Row>
           <Row></Row>
         </Grid>
-        <Grid columns='1fr 1fr'>
+        <Grid columns='1fr 1fr' media={gridMedia}>
           <Row align='start' size='big'>
             <FeaturesContainer>
               <FeaturesBox>
