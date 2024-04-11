@@ -38,6 +38,7 @@ const HeroSectionRight = styled.div`
     justify-content: center;
   }
   @media (max-width: 850px) {
+    /* flex: 0 1 30%; */
   }
 `;
 
@@ -51,6 +52,13 @@ const HeroMainImgBox = styled.div`
   width: 30vw;
   height: 30vw;
   box-shadow: 0 0.75rem 1.5rem 0 var(--shadow);
+
+  @media (max-width: 850px) {
+    left: -20%;
+    transform: translate(0, -50%);
+    height: 30rem;
+    width: 30rem;
+  }
 
   &::after {
     content: '';

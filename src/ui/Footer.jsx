@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import Logo from './Logo.jsx';
-import Icon from './Icon.jsx';
 import { Link } from 'react-router-dom';
 import {
   IoCallOutline,
@@ -8,9 +6,11 @@ import {
   IoMailOutline,
   IoLogoFacebook,
 } from 'react-icons/io5';
-
+import Icon from './Icon.jsx';
+import Logo from './Logo.jsx';
 import Grid from './Grid.jsx';
-import Row from './Row.jsx';
+
+import { animateScroll as scroll } from 'react-scroll';
 
 const StyledFooter = styled.footer`
   background-color: var(--color-black);
@@ -18,11 +18,23 @@ const StyledFooter = styled.footer`
   padding: 6rem 12rem;
 `;
 
+const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 4.8rem 0 2.4rem 0;
+  gap: 0 12rem;
+  @media (max-width: 850px) {
+    gap: 3.2rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 const FooterRow = styled.div`
   align-self: start;
   border-top: 1px solid var(--color-accent2-light);
-  padding: 2.4rem 4rem;
-  width: 80%;
+  padding: 2.4rem 4rem 0 4rem;
+  width: 100%;
   text-align: center;
 `;
 
@@ -30,11 +42,15 @@ const ContactRow = styled(FooterRow)`
   justify-self: right;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2.4rem;
 `;
 
 const OtherServices = styled(FooterRow)`
   justify-self: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* text-align: center; */
 `;
 
 const ContactDetails = styled.ul`
@@ -99,16 +115,20 @@ const StyledLink = styled(Link)`
     color: #fbada3;
     letter-spacing: 1px;
     &::before {
-      width: 10%;
+      width: 15rem;
     }
   }
 `;
 
 function Footer() {
+  const scrollToTop = function () {
+    scroll.scrollToTop();
+  };
+
   return (
     <StyledFooter>
       <Logo></Logo>
-      <Grid columns='1fr 1fr' margin='4.8rem 0 2.4rem 0' gap='0 20rem'>
+      <StyledGrid>
         <ContactRow>
           <ContactDetails>
             <span>R&A Administritis</span>
@@ -147,12 +167,14 @@ function Footer() {
           </FooterContactLinks>
         </ContactRow>
         <OtherServices>
-          <StyledLink to='/'>Acasa</StyledLink>
-          <StyledLink to='/'>Acasa</StyledLink>
-          <StyledLink to='/'>Acasa</StyledLink>
-          <StyledLink to='/'>Acasa</StyledLink>
+          <StyledLink onClick={scrollToTop}>Acasa</StyledLink>
+          <StyledLink to='/'>Servicii</StyledLink>
+          <StyledLink to='/'>Documente utile</StyledLink>
+          <StyledLink to='/'>Contact</StyledLink>
+          <StyledLink to='/'>Avizier</StyledLink>
+          <StyledLink to='/'>Colaborare</StyledLink>
         </OtherServices>
-      </Grid>
+      </StyledGrid>
     </StyledFooter>
   );
 }

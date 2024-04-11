@@ -104,6 +104,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   @media (min-width:120em) {
     font-size: 68.75%;
