@@ -1,10 +1,16 @@
 import styled from 'styled-components';
-import { IoCallOutline, IoMailOutline, IoLogoInstagram } from 'react-icons/io5';
+import {
+  IoCallOutline,
+  IoMailOutline,
+  IoLogoInstagram,
+  IoLogoFacebook,
+} from 'react-icons/io5';
 
 import heroMain from '/assets/heroMain.jpg';
 import Heading from './Heading.jsx';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
+import { RiFacebookBoxLine } from 'react-icons/ri';
 
 const StyledHeroSection = styled.div`
   display: flex;
@@ -161,6 +167,13 @@ function HeroSectionHome({ children }) {
             <a>
               <Icon color={'#626262'} hoverColor='#7c2d24'>
                 <IoLogoInstagram></IoLogoInstagram>
+              </Icon>
+            </a>
+          </li>
+          <li>
+            <a>
+              <Icon color={'#626262'} hoverColor='#7c2d24' sizes='medium'>
+                <IoLogoFacebook></IoLogoFacebook>
               </Icon>
             </a>
           </li>
