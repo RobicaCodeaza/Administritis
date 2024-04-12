@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
+import useMediaQueryResize, { phone, tabPort } from '../hooks/useMediaQuery.js';
 
 const StyledContactSection = styled.div`
   padding: 12rem 0;
@@ -18,16 +20,17 @@ const ContactCard = styled.div`
   /* background-color: var(--color-accent2); */
   /* object-fit: contain; */
   background-size: cover;
-  background-image: url('/assets/pattern2.png');
+  background-image: url('../../public/assets/pattern2.png');
   box-shadow: 1rem 1rem 2rem 0 var(--shadow-lightest);
 
   @media (max-width: 850px) {
     width: 60rem;
   }
-  
+
   @media (max-width: 600px) {
-    /* max-width: 50rem; */
-  
+    max-width: 40rem;
+    height: 25rem;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -56,6 +59,10 @@ const ContactDetails = styled.div`
   justify-content: center;
   align-items: center;
   padding: 4rem 8rem;
+
+  @media (max-width: 600px) {
+    padding: 0rem 4rem;
+  }
 `;
 
 const ContactTitle = styled.p`
@@ -89,6 +96,9 @@ const ContactButton = styled.button`
 `;
 
 function ContactSection() {
+  const mediaTab = useMediaQuery({ query: `max-width:${tabPort}` });
+  console.log(mediaTab);
+
   return (
     <StyledContactSection>
       <ContactCard>

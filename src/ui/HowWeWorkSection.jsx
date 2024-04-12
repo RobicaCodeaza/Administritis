@@ -7,6 +7,7 @@ import photo1 from '/assets/intalnire.jpg';
 import photo2 from '/assets/elaborare.jpg';
 import photo3 from '/assets/implementare.jpg';
 import photo4 from '/assets/monitorizare.jpg';
+import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js';
 
 const StyledHowWeWorkSection = styled.div`
   padding: 12rem 0rem 25rem 0;
@@ -20,13 +21,15 @@ const StepList = styled.ul`
 `;
 
 const StepItem = styled.div`
+  position: relative;
   display: flex;
   gap: 2.4rem;
   position: relative;
-  /* border-right: 1px solid var(--color-accent1); */
   background-color: var(--color-white);
   border-radius: 0.5rem;
-  /* overflow: hidden; */
+  @media (max-width: 600px) {
+    padding: 3.2rem 4.4rem;
+  }
 
   &::before {
     content: '';
@@ -36,7 +39,6 @@ const StepItem = styled.div`
     bottom: 0;
     height: 1px;
     width: 10rem;
-    /* background-color: */
     box-shadow: 0 1rem 2.5rem 0.2rem var(--shadow-lightest);
   }
   &::after {
@@ -56,12 +58,43 @@ const SpacedStepItem = styled(StepItem)`
   @media (max-width: 850px) {
     margin-left: 5rem;
   }
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
 `;
 
 const ItemPhoto = styled.img`
+  display: block;
   height: 20rem;
   width: 20rem;
   object-fit: cover;
+  position: relative;
+
+  @media (max-width: 600px) {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+  }
+`;
+
+const ItemOverlay = styled.div`
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    var(--color-primary-light),
+    var(--color-primary-light)
+  ) !important;
+  /* filter: blur(5px); */
+
+  opacity: 0.94;
 `;
 const ItemStep = styled.div`
   color: var(--color-secondary--1);
@@ -69,20 +102,37 @@ const ItemStep = styled.div`
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  z-index: 2;
+  @media (max-width: 600px) {
+    color: var(--color-primary-dark);
+  }
 `;
 const ItemTitle = styled.div`
   font-size: 2rem;
   font-weight: 600;
   /* line-height: 1.2; */
+  z-index: 2;
+  @media (max-width: 600px) {
+    color: var(--color-primary-dark);
+  }
 `;
 const ItemDescription = styled.p`
   color: var(--color-grey-dark--1);
   font-size: 1.7rem;
+  z-index: 2;
+  @media (max-width: 600px) {
+    color: var(--color-primary-dark);
+  }
 `;
 
 function HowWeWorkSection() {
+  const mediaPhone = useMediaQueryResize(phone);
+
+  // if (mediaPhone) console.log('phone');
+  // else console.log('smth bigger');
+
   return (
-    <StyledHowWeWorkSection>
+    <StyledHowWeWorkSection name='colaborare'>
       <Container>
         <Grid margin='0 0 4.8rem 0' columns='1fr 1fr'>
           <Row size='tiny'>
@@ -95,7 +145,8 @@ function HowWeWorkSection() {
         <StepList>
           <StepItem>
             <ItemPhoto src={photo1}></ItemPhoto>
-            <Row size='small' justifyContent='center'>
+            {mediaPhone && <ItemOverlay></ItemOverlay>}
+            <Row size='small' justifycontent='center'>
               <ItemStep>Pasul 1</ItemStep>
               <ItemTitle>Întâlnirea inițială</ItemTitle>
               <ItemDescription>
@@ -106,7 +157,9 @@ function HowWeWorkSection() {
           </StepItem>
           <SpacedStepItem>
             <ItemPhoto src={photo2}></ItemPhoto>
-            <Row size='small' justifyContent='center'>
+            {mediaPhone && <ItemOverlay></ItemOverlay>}
+
+            <Row size='small' justifycontent='center'>
               <ItemStep>Pasul 2</ItemStep>
               <ItemTitle>Elaborarea planului</ItemTitle>
               <ItemDescription>
@@ -117,7 +170,8 @@ function HowWeWorkSection() {
           </SpacedStepItem>
           <StepItem>
             <ItemPhoto src={photo3}></ItemPhoto>
-            <Row size='small' justifyContent='center'>
+            {mediaPhone && <ItemOverlay></ItemOverlay>}
+            <Row size='small' justifycontent='center'>
               <ItemStep>Pasul 3</ItemStep>
               <ItemTitle>Implementarea planului</ItemTitle>
               <ItemDescription>
@@ -128,7 +182,8 @@ function HowWeWorkSection() {
           </StepItem>
           <SpacedStepItem>
             <ItemPhoto src={photo4}></ItemPhoto>
-            <Row size='small' justifyContent='center'>
+            {mediaPhone && <ItemOverlay></ItemOverlay>}
+            <Row size='small' justifycontent='center'>
               <ItemStep>Pasul 4</ItemStep>
               <ItemTitle>Monitorizare</ItemTitle>
               <ItemDescription>

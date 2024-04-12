@@ -21,9 +21,9 @@ const sizes = {
 const Row = styled.div`
   display: flex;
   ${(props) =>
-    props.justifyContent !== '' &&
+    props.justifycontent !== '' &&
     css`
-      justify-content: ${(props) => props.justifyContent};
+      justify-content: ${(props) => props.justifycontent};
     `}
   ${(props) =>
     props.justify !== '' &&
@@ -38,9 +38,9 @@ const Row = styled.div`
       align-items: ${(props) => props.align};
     `}
   ${(props) =>
-    props.alignContent !== '' &&
+    props.aligncontent !== '' &&
     css`
-      align-content: ${(props) => props.alignContent};
+      align-content: ${(props) => props.aligncontent};
     `}
   ${(props) => sizes[props.size]};
   ${(props) =>
@@ -59,8 +59,8 @@ Row.defaultProps = {
   size: 'medium',
   justify: '',
   align: '',
-  justifyContent: '',
-  alignContent: '',
+  justifycontent: '',
+  aligncontent: '',
 };
 
 export default Row;

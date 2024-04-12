@@ -10,7 +10,7 @@ import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
 import Grid from './Grid.jsx';
 
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 const StyledFooter = styled.footer`
   background-color: var(--color-black);
@@ -121,8 +121,17 @@ const StyledLink = styled(Link)`
 `;
 
 function Footer() {
-  const scrollToTop = function () {
-    scroll.scrollToTop();
+  const goTo = function (to) {
+    if (to === 'top') {
+      scroll.scrollToTop({ duration: 300, smooth: true });
+      return;
+    }
+    if (to === 'bottom') {
+      scroll.scrollToTop();
+      return;
+    }
+
+    scroller.scrollTo(to, { duration: 350, smooth: 'easeInOutQuart' });
   };
 
   return (
@@ -138,28 +147,28 @@ function Footer() {
           <FooterContactLinks>
             <li>
               <a>
-                <Icon hoverColor='#fbada3' color={'#fddeda'} sizes='small'>
+                <Icon hovercolor='#fbada3' color={'#fddeda'} sizes='small'>
                   <IoCallOutline></IoCallOutline>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon hoverColor='#fbada3' color={'#fddeda'} sizes='small'>
+                <Icon hovercolor='#fbada3' color={'#fddeda'} sizes='small'>
                   <IoMailOutline></IoMailOutline>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon color={'#fddeda'} hoverColor='#fbada3' sizes='small'>
+                <Icon color={'#fddeda'} hovercolor='#fbada3' sizes='small'>
                   <IoLogoInstagram></IoLogoInstagram>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon color={'#fddeda'} hoverColor='#fbada3' sizes='small'>
+                <Icon color={'#fddeda'} hovercolor='#fbada3' sizes='small'>
                   <IoLogoFacebook></IoLogoFacebook>
                 </Icon>
               </a>
@@ -167,12 +176,12 @@ function Footer() {
           </FooterContactLinks>
         </ContactRow>
         <OtherServices>
-          <StyledLink onClick={scrollToTop}>Acasa</StyledLink>
+          <StyledLink onClick={() => goTo('top')}>Acasa</StyledLink>
           <StyledLink to='/'>Servicii</StyledLink>
           <StyledLink to='/'>Documente utile</StyledLink>
           <StyledLink to='/'>Contact</StyledLink>
           <StyledLink to='/'>Avizier</StyledLink>
-          <StyledLink to='/'>Colaborare</StyledLink>
+          <StyledLink onClick={() => goTo('colaborare')}>Colaborare</StyledLink>
         </OtherServices>
       </StyledGrid>
     </StyledFooter>

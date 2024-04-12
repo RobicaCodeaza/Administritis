@@ -119,9 +119,6 @@ html {
 
 body {
   box-sizing: border-box;
-
-  // height: 100%;
-  // overflow: hidden;
   font-size:1.6rem;
   font-family: var(--font-primary);
   color: var(--color-grey-dark--3);

@@ -76,7 +76,7 @@ function AboutSection() {
             <AboutUsBullet>
               {/* <Icon></Icon> */}
               <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                   <GrOptimize></GrOptimize>
                 </Icon>
               </IconBackground>
@@ -90,7 +90,7 @@ function AboutSection() {
             </AboutUsBullet>
             <AboutUsBullet>
               <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                   <GrSecure></GrSecure>
                 </Icon>
               </IconBackground>
@@ -105,7 +105,7 @@ function AboutSection() {
             </AboutUsBullet>
             <AboutUsBullet>
               <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                   <TiCloudStorageOutline></TiCloudStorageOutline>
                 </Icon>
               </IconBackground>

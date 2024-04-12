@@ -27,6 +27,10 @@ const HeroSectionLeft = styled.div`
   @media (max-width: 850px) {
     padding: 6vw 15vw 6vw 4vw;
   }
+
+  @media (max-width: 600px) {
+    padding: 9vw;
+  }
 `;
 const HeroSectionRight = styled.div`
   flex: 0 1 35%;
@@ -175,28 +179,28 @@ function HeroSectionHome({ children }) {
         <HeroContactLinks>
           <li>
             <a>
-              <Icon hoverColor='#7c2d24' color={'#626262'} sizes='medium'>
+              <Icon hovercolor='#7c2d24' color={'#626262'} sizes='medium'>
                 <IoCallOutline></IoCallOutline>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon hoverColor='#7c2d24' color={'#626262'} sizes='medium'>
+              <Icon hovercolor='#7c2d24' color={'#626262'} sizes='medium'>
                 <IoMailOutline></IoMailOutline>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon color={'#626262'} hoverColor='#7c2d24'>
+              <Icon color={'#626262'} hovercolor='#7c2d24'>
                 <IoLogoInstagram></IoLogoInstagram>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon color={'#626262'} hoverColor='#7c2d24' sizes='medium'>
+              <Icon color={'#626262'} hovercolor='#7c2d24' sizes='medium'>
                 <IoLogoFacebook></IoLogoFacebook>
               </Icon>
             </a>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js';
 
 const StyledHeading = styled.h1`
   ${(props) =>
@@ -64,6 +65,8 @@ ${(props) =>
 `;
 
 function Heading({ children, as, margin, variation }) {
+  const mediaPhone = useMediaQueryResize(phone);
+
   return (
     <StyledHeading as={as} margin={margin} variation={variation}>
       {children}

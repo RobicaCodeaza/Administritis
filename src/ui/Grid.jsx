@@ -9,6 +9,12 @@ const StyledGrid = styled.div`
   transition: none;
   margin: ${(props) => (props.$margin ? props.$margin : 0)};
   ${(props) => (props.media ? props.media : '')}
+
+  @media (max-width:600px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: ${(props) => props.$gap.replace('0', '')};
+  }
 `;
 
 function Grid({ children, columns, margin, gap, media }) {

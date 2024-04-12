@@ -22,13 +22,8 @@ const FeaturesContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: row auto;
   gap: 3.2rem;
-  /* align-items: center; */
-  /* align-content: center; */
 
   @media (max-width: 850px) {
-    /* grid-row: 2/3; */
-    /* grid-column: 1/-1; */
-    /* justify-self: center; */
     display: flex;
     flex-direction: column;
   }
@@ -103,7 +98,7 @@ function FeaturesSection() {
   return (
     <StyledFeaturesSection>
       <Container>
-        <Grid margin='0 0 4.8rem 0' gap='5.6rem 0' columns='1fr 1fr'>
+        <Grid margin='0 0 4.8rem 0' gap='0' columns='1fr 1fr'>
           <Row>
             <Row size='tiny'>
               <Heading as='h4' variation='accent'>
@@ -113,7 +108,7 @@ function FeaturesSection() {
             </Row>
             <Grid></Grid>
           </Row>
-          <Row></Row>
+          <span></span>
         </Grid>
         <Grid columns='1fr 1fr' media={gridMedia}>
           <Row align='start' size='big'>
@@ -121,7 +116,7 @@ function FeaturesSection() {
               <FeaturesBox>
                 <Row type='horizontal' size='medium'>
                   <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                       <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
                     </Icon>
                   </IconBackground>
@@ -140,7 +135,7 @@ function FeaturesSection() {
               <FeaturesBox>
                 <Row type='horizontal' size='medium'>
                   <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                       <IoDocumentTextOutline></IoDocumentTextOutline>
                     </Icon>
                   </IconBackground>
@@ -154,7 +149,7 @@ function FeaturesSection() {
               <FeaturesBox>
                 <Row type='horizontal' size='medium'>
                   <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                       <GiReceiveMoney></GiReceiveMoney>
                     </Icon>
                   </IconBackground>
@@ -168,7 +163,7 @@ function FeaturesSection() {
               <FeaturesBox>
                 <Row type='horizontal' size='medium'>
                   <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hoverColor='#140368' sizes='tiny'>
+                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
                       <VscTools></VscTools>
                     </Icon>
                   </IconBackground>

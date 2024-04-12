@@ -32,14 +32,14 @@ const StyledIcon = styled.div`
     ${(props) => sizes[props.sizes]}
 
     &:hover {
-      color: ${(props) => props.hoverColor} !important;
+      color: ${(props) => props.hovercolor} !important;
     }
   }
 `;
 
-function Icon({ children, color, hoverColor, sizes }) {
+function Icon({ children, color, hovercolor, sizes }) {
   return (
-    <StyledIcon color={color} hoverColor={hoverColor} sizes={sizes}>
+    <StyledIcon color={color} hovercolor={hovercolor} sizes={sizes}>
       {children}
     </StyledIcon>
   );
