@@ -18,9 +18,16 @@ const ContactCard = styled.div`
   /* background-color: var(--color-accent2); */
   /* object-fit: contain; */
   background-size: cover;
-  background-image: url('/../../public/assets/pattern2.png');
+  background-image: url('/assets/pattern2.png');
   box-shadow: 1rem 1rem 2rem 0 var(--shadow-lightest);
 
+  @media (max-width: 850px) {
+    width: 60rem;
+  }
+  
+  @media (max-width: 600px) {
+    /* max-width: 50rem; */
+  
   &::after {
     content: '';
     position: absolute;

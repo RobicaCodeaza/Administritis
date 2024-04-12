@@ -12,6 +12,10 @@ const sizes = {
   medium: css`
     width: 3rem !important;
     height: 3rem !important;
+    @media (max-width: 600px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   `,
   large: css`
     width: 3.5rem;

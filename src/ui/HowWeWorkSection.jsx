@@ -53,6 +53,9 @@ const StepItem = styled.div`
 `;
 const SpacedStepItem = styled(StepItem)`
   margin-left: 22.4rem;
+  @media (max-width: 850px) {
+    margin-left: 5rem;
+  }
 `;
 
 const ItemPhoto = styled.img`

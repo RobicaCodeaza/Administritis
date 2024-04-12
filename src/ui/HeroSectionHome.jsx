@@ -16,6 +16,9 @@ const StyledHeroSection = styled.div`
   display: flex;
   /* height: 40vw; */
   /* padding: 90vh; */
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 const HeroSectionLeft = styled.div`
   flex: 0 1 65%;
@@ -40,6 +43,12 @@ const HeroSectionRight = styled.div`
   @media (max-width: 850px) {
     /* flex: 0 1 30%; */
   }
+  @media (max-width: 600px) {
+    justify-content: space-around;
+
+    padding: 2vw 6vw;
+    align-items: center;
+  }
 `;
 
 const HeroMainImgBox = styled.div`
@@ -58,6 +67,14 @@ const HeroMainImgBox = styled.div`
     transform: translate(0, -50%);
     height: 30rem;
     width: 30rem;
+  }
+  @media (max-width: 600px) {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
   }
 
   &::after {
