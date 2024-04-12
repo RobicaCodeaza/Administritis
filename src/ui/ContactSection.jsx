@@ -96,8 +96,10 @@ const ContactButton = styled.button`
 `;
 
 function ContactSection() {
-  const mediaTab = useMediaQuery({ query: `max-width:${tabPort}` });
+  const mediaTab = useMediaQuery({ query: `(max-width:${phone})` });
   console.log(mediaTab);
+
+  const mediaPhone = useMediaQueryResize(phone);
 
   return (
     <StyledContactSection>
