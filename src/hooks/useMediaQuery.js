@@ -3,10 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 function useMediaQueryResize(query, basicQuery = 'max-width') {
   const queryResponsive = `(${basicQuery}:${query})`;
-  const [matches, setMatches] = useState(
-    useMediaQuery({ query: queryResponsive })
-  );
-  console.log(matches);
+  const matches = useMediaQuery({ query: queryResponsive });
   // useEffect(() => {
   //   const mediaQueryList = window.matchMedia(queryResponsive);
 

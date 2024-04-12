@@ -65,8 +65,6 @@ ${(props) =>
 `;
 
 function Heading({ children, as, margin, variation }) {
-  const mediaPhone = useMediaQueryResize(phone);
-
   return (
     <StyledHeading as={as} margin={margin} variation={variation}>
       {children}

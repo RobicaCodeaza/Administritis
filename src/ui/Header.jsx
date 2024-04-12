@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import Logo from './Logo.jsx';
-import Container from './Container.jsx';
+// import Container from './Container.jsx';
 import { Link } from 'react-router-dom';
+
+import { CiMenuBurger } from 'react-icons/ci';
+import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js';
+import { useState } from 'react';
+import Icon from './Icon.jsx';
 
 const StyledHeader = styled.div`
   display: flex;
@@ -22,6 +27,27 @@ const NavList = styled.ul`
   gap: 1.2rem;
   align-items: center;
   list-style: none;
+
+  @media (max-width: 600px) {
+    z-index: 3;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+
+    width: 0%;
+    padding: 3.2rem 6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-primary-light);
+  }
+
+  &.active {
+    left: 0;
+    width: 100%;
+  }
 `;
 const NavItem = styled.li`
   /* border-bottom: 1px solid var(--color-grey--3); */
@@ -75,28 +101,93 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const ToggleMenu = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3rem;
+  z-index: 4;
+  right: 3rem;
+  border: none;
+  background-color: transparent;
+`;
+
 function Header({ children }) {
+  const mediaPhone = useMediaQueryResize(phone);
+  const [menuActive, setMenuActive] = useState(false);
+
+  function handleToggle() {
+    setMenuActive((active) => !active);
+  }
+
   return (
     <StyledHeader>
       <Logo></Logo>
       <StyledNav>
-        <NavList>
-          <NavItem>
-            <StyledLink to='/'>Acasa</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink to='servicii'>Servicii</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink to='documente'>Documente utile</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink>Contact</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink to=''>Avizier</StyledLink>
-          </NavItem>
-        </NavList>
+        {mediaPhone ? (
+          <>
+            <ToggleMenu onClick={handleToggle}>
+              <Icon color='#190482'>
+                <CiMenuBurger>s</CiMenuBurger>
+              </Icon>
+            </ToggleMenu>
+            <NavList
+              style={
+                menuActive
+                  ? { display: 'flex' }
+                  : {
+                      visibility: 'hidden',
+                      opacity: '0',
+                      pointerEvents: 'none',
+                    }
+              }
+              className={menuActive ? 'active' : ''}
+            >
+              <NavItem>
+                <StyledLink to='/' onClick={handleToggle}>
+                  Acasa
+                </StyledLink>
+              </NavItem>
+              <NavItem>
+                <StyledLink to='servicii' onClick={handleToggle}>
+                  Servicii
+                </StyledLink>
+              </NavItem>
+              <NavItem>
+                <StyledLink to='documente' onClick={handleToggle}>
+                  Documente utile
+                </StyledLink>
+              </NavItem>
+              <NavItem>
+                <StyledLink onClick={handleToggle}>Contact</StyledLink>
+              </NavItem>
+              <NavItem>
+                <StyledLink to='' onClick={handleToggle}>
+                  Avizier
+                </StyledLink>
+              </NavItem>
+            </NavList>
+          </>
+        ) : (
+          <NavList>
+            <NavItem>
+              <StyledLink to='/'>Acasa</StyledLink>
+            </NavItem>
+            <NavItem>
+              <StyledLink to='servicii'>Servicii</StyledLink>
+            </NavItem>
+            <NavItem>
+              <StyledLink to='documente'>Documente utile</StyledLink>
+            </NavItem>
+            <NavItem>
+              <StyledLink>Contact</StyledLink>
+            </NavItem>
+            <NavItem>
+              <StyledLink to=''>Avizier</StyledLink>
+            </NavItem>
+          </NavList>
+        )}
       </StyledNav>
       <></>
     </StyledHeader>
