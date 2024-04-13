@@ -1,17 +1,17 @@
-import styled, { css } from 'styled-components';
-import Grid from './Grid.jsx';
-import Row from './Row.jsx';
-import Heading from './Heading.jsx';
-import Container from './Container.jsx';
-import featuresPhoto from '/assets/features.jpg';
-import IconBackground from './IconBackground.jsx';
-import Icon from './Icon.jsx';
+import styled, { css } from "styled-components";
+import Grid from "./Grid.jsx";
+import Row from "./Row.jsx";
+import Heading from "./Heading.jsx";
+import Container from "./Container.jsx";
+import featuresPhoto from "/assets/features.jpg";
+import IconBackground from "./IconBackground.jsx";
+import Icon from "./Icon.jsx";
 
-import { RiCheckboxMultipleFill } from 'react-icons/ri';
-import { IoDocumentTextOutline } from 'react-icons/io5';
-import { GiReceiveMoney } from 'react-icons/gi';
-import { VscTools } from 'react-icons/vsc';
-import Button from './Button.jsx';
+import { RiCheckboxMultipleFill } from "react-icons/ri";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { GiReceiveMoney } from "react-icons/gi";
+import { VscTools } from "react-icons/vsc";
+import { Button } from "./Button.jsx";
 const StyledFeaturesSection = styled.div`
   padding: 12rem 0rem;
   background-color: var(--color-white);
@@ -98,44 +98,44 @@ function FeaturesSection() {
   return (
     <StyledFeaturesSection>
       <Container>
-        <Grid margin='0 0 4.8rem 0' gap='0' columns='1fr 1fr'>
+        <Grid margin="0 0 4.8rem 0" gap="0" columns="1fr 1fr">
           <Row>
-            <Row size='tiny'>
-              <Heading as='h4' variation='accent'>
+            <Row size="tiny">
+              <Heading as="h4" variation="accent">
                 Servicii
               </Heading>
-              <Heading as='h2'>Ceea ce oferim</Heading>
+              <Heading as="h2">Ceea ce oferim</Heading>
             </Row>
             <Grid></Grid>
           </Row>
           <span></span>
         </Grid>
-        <Grid columns='1fr 1fr' media={gridMedia}>
-          <Row align='start' size='big'>
+        <Grid columns="1fr 1fr" media={gridMedia}>
+          <Row align="start" size="big">
             <FeaturesContainer>
               <FeaturesBox>
-                <Row type='horizontal' size='medium'>
-                  <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+                <Row type="horizontal" size="medium">
+                  <IconBackground color="#C2D9FF" size="large">
+                    <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
                     </Icon>
                   </IconBackground>
                   <FeaturesTitle>Adminstrare Completa</FeaturesTitle>
                 </Row>
                 <FeatureDescription>
-                  Un pachet complet ce include{' '}
-                  <strong style={{ fontSize: '1.4rem' }}>Contabilitatea</strong>
+                  Un pachet complet ce include{" "}
+                  <strong style={{ fontSize: "1.4rem" }}>Contabilitatea</strong>
                   +
-                  <strong style={{ fontSize: '1.4rem' }}>
+                  <strong style={{ fontSize: "1.4rem" }}>
                     Administrarea tehnica
                   </strong>
-                  +<strong style={{ fontSize: '1.4rem' }}>Casierie</strong>.
+                  +<strong style={{ fontSize: "1.4rem" }}>Casierie</strong>.
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type='horizontal' size='medium'>
-                  <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+                <Row type="horizontal" size="medium">
+                  <IconBackground color="#C2D9FF" size="large">
+                    <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <IoDocumentTextOutline></IoDocumentTextOutline>
                     </Icon>
                   </IconBackground>
@@ -147,9 +147,9 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type='horizontal' size='medium'>
-                  <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+                <Row type="horizontal" size="medium">
+                  <IconBackground color="#C2D9FF" size="large">
+                    <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <GiReceiveMoney></GiReceiveMoney>
                     </Icon>
                   </IconBackground>
@@ -161,9 +161,9 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type='horizontal' size='medium'>
-                  <IconBackground color='#C2D9FF' size='large'>
-                    <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+                <Row type="horizontal" size="medium">
+                  <IconBackground color="#C2D9FF" size="large">
+                    <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <VscTools></VscTools>
                     </Icon>
                   </IconBackground>
@@ -174,7 +174,7 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
             </FeaturesContainer>
-            <Button variation='secondary' to='servicii'>
+            <Button variation="secondary" to="servicii">
               Mai multe detalii
             </Button>
           </Row>

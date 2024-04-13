@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const sizes = {
   small: css`
@@ -8,7 +8,7 @@ const sizes = {
     padding: 0.4rem 0.8rem;
     text-transform: uppercase;
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 0.25rem;
   `,
   medium: css`
@@ -55,14 +55,21 @@ const variations = {
   `,
 };
 
-const Button = styled(Link)`
+const buttonStyles = css`
   display: block;
   border: none;
   text-decoration: none;
-  /* box-shadow: var(--shadow-sm); */
   ${(props) => sizes[props.size]}
   ${(props) => variations[props.variation]}
 `;
 
-Button.defaultProps = { variation: 'primary', size: 'medium' };
-export default Button;
+const Button = styled.button`
+  ${buttonStyles}
+`;
+
+const ButtonLink = styled(Link)`
+  ${buttonStyles}
+`;
+
+Button.defaultProps = { variation: "primary", size: "large" };
+export { Button, ButtonLink };

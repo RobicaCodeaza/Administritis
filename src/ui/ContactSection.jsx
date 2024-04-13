@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import useMediaQueryResize, { phone, tabPort } from '../hooks/useMediaQuery.js';
+import styled from "styled-components";
+import useMediaQueryResize, { phone, tabPort } from "../hooks/useMediaQuery.js";
+import FormTrigger from "./FormTrigger.jsx";
 
 const StyledContactSection = styled.div`
   padding: 12rem 0;
@@ -17,7 +18,7 @@ const ContactCard = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   background-size: cover;
-  background-image: url('../../public/assets/pattern2.png');
+  background-image: url("../../public/assets/pattern2.png");
   box-shadow: 1rem 1rem 2rem 0 var(--shadow-lightest);
 
   @media (max-width: 850px) {
@@ -29,7 +30,7 @@ const ContactCard = styled.div`
     height: 25rem;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -103,7 +104,9 @@ function ContactSection() {
           <ContactDescription>
             Ne poti contacta pentru a discuta despre nevoile dumneavoastra.
           </ContactDescription>
-          <ContactButton>Contact</ContactButton>
+          <FormTrigger>
+            <ContactButton>Contact</ContactButton>
+          </FormTrigger>
         </ContactDetails>
       </ContactCard>
     </StyledContactSection>

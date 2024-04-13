@@ -1,11 +1,12 @@
 // import Header from '../ui/Header';
-import styled from 'styled-components';
-import HeroSectionHome from '../ui/HeroSectionHome.jsx';
-import AboutSection from '../ui/AboutSection.jsx';
-import FeaturesSection from '../ui/FeaturesSection.jsx';
-import HowWeWorkSection from '../ui/HowWeWorkSection.jsx';
-import ContactSection from '../ui/ContactSection.jsx';
-import Footer from '../ui/Footer.jsx';
+import styled from "styled-components";
+import HeroSectionHome from "../ui/HeroSectionHome.jsx";
+import AboutSection from "../ui/AboutSection.jsx";
+import FeaturesSection from "../ui/FeaturesSection.jsx";
+import HowWeWorkSection from "../ui/HowWeWorkSection.jsx";
+import ContactSection from "../ui/ContactSection.jsx";
+import Footer from "../ui/Footer.jsx";
+import Form from "@/ui/FormTrigger.jsx";
 
 const StyledHome = styled.div`
   background-color: var(--color-primary-light);
@@ -15,6 +16,8 @@ const StyledHome = styled.div`
 function Home() {
   return (
     <StyledHome>
+      <Form></Form>
+
       <HeroSectionHome></HeroSectionHome>
       <AboutSection></AboutSection>
       <FeaturesSection></FeaturesSection>

@@ -1,16 +1,17 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   IoCallOutline,
   IoLogoInstagram,
   IoMailOutline,
   IoLogoFacebook,
-} from 'react-icons/io5';
-import Icon from './Icon.jsx';
-import Logo from './Logo.jsx';
-import Grid from './Grid.jsx';
+} from "react-icons/io5";
+import Icon from "./Icon.jsx";
+import Logo from "./Logo.jsx";
+import Grid from "./Grid.jsx";
 
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import { animateScroll as scroll, scroller } from "react-scroll";
+import FormTrigger from "./FormTrigger.jsx";
 
 const StyledFooter = styled.footer`
   background-color: var(--color-black);
@@ -91,7 +92,7 @@ const StyledLink = styled(Link)`
     /* color: var(--color-primary-light--2); */
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 50%;
@@ -119,19 +120,65 @@ const StyledLink = styled(Link)`
     }
   }
 `;
+const StyledNoLink = styled.a`
+  &,
+  &:visited {
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--color-accent2-light);
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    padding: 0.4rem 0.8rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* border-radius: 0.5rem; */
+
+    /* background-color: #201658; */
+    /* color: var(--color-primary-light--2); */
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      /* bottom: -10px; */
+      width: 0;
+      height: 1px;
+      transition: all 0.3s;
+      background-image: linear-gradient(
+        var(--color-accent1),
+        var(--color-accent1-dark)
+      );
+    }
+  }
+
+  &:hover,
+  &:active {
+    transform: translateY(-1.5px);
+    color: #fbada3;
+    letter-spacing: 1px;
+    &::before {
+      width: 15rem;
+    }
+  }
+`;
 
 function Footer() {
   const goTo = function (to) {
-    if (to === 'top') {
+    if (to === "top") {
       scroll.scrollToTop({ duration: 300, smooth: true });
       return;
     }
-    if (to === 'bottom') {
-      scroll.scrollToTop();
+    if (to === "bottom") {
+      scroll.scrollToBottom();
       return;
     }
 
-    scroller.scrollTo(to, { duration: 350, smooth: 'easeInOutQuart' });
+    scroller.scrollTo(to, { duration: 350, smooth: "easeInOutQuart" });
   };
 
   return (
@@ -147,28 +194,28 @@ function Footer() {
           <FooterContactLinks>
             <li>
               <a>
-                <Icon hovercolor='#fbada3' color={'#fddeda'} sizes='small'>
+                <Icon hovercolor="#fbada3" color={"#fddeda"} sizes="small">
                   <IoCallOutline></IoCallOutline>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon hovercolor='#fbada3' color={'#fddeda'} sizes='small'>
+                <Icon hovercolor="#fbada3" color={"#fddeda"} sizes="small">
                   <IoMailOutline></IoMailOutline>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon color={'#fddeda'} hovercolor='#fbada3' sizes='small'>
+                <Icon color={"#fddeda"} hovercolor="#fbada3" sizes="small">
                   <IoLogoInstagram></IoLogoInstagram>
                 </Icon>
               </a>
             </li>
             <li>
               <a>
-                <Icon color={'#fddeda'} hovercolor='#fbada3' sizes='small'>
+                <Icon color={"#fddeda"} hovercolor="#fbada3" sizes="small">
                   <IoLogoFacebook></IoLogoFacebook>
                 </Icon>
               </a>
@@ -176,12 +223,14 @@ function Footer() {
           </FooterContactLinks>
         </ContactRow>
         <OtherServices>
-          <StyledLink onClick={() => goTo('top')}>Acasa</StyledLink>
-          <StyledLink to='/'>Servicii</StyledLink>
-          <StyledLink to='/'>Documente utile</StyledLink>
-          <StyledLink to='/'>Contact</StyledLink>
-          <StyledLink to='/'>Avizier</StyledLink>
-          <StyledLink onClick={() => goTo('colaborare')}>Colaborare</StyledLink>
+          <StyledLink onClick={() => goTo("top")}>Acasa</StyledLink>
+          <StyledLink to="/">Servicii</StyledLink>
+          <StyledLink to="/">Documente utile</StyledLink>
+          <FormTrigger>
+            <StyledNoLink>Contact</StyledNoLink>
+          </FormTrigger>
+          <StyledLink to="/">Avizier</StyledLink>
+          <StyledLink onClick={() => goTo("colaborare")}>Colaborare</StyledLink>
         </OtherServices>
       </StyledGrid>
     </StyledFooter>

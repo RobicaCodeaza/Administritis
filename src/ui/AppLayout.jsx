@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import { Outlet } from 'react-router-dom';
-import Header from './Header.jsx';
+import styled from "styled-components";
+import { Outlet } from "react-router-dom";
+import Header from "./Header.jsx";
+import Form from "./FormTrigger.jsx";
 
 const AppContainer = styled.div`
   /* display: grid;

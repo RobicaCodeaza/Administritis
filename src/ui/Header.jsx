@@ -1,12 +1,13 @@
-import styled from 'styled-components';
-import Logo from './Logo.jsx';
-// import Container from './Container.jsx';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { CiMenuBurger } from "react-icons/ci";
 
-import { CiMenuBurger } from 'react-icons/ci';
-import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js';
-import { useState } from 'react';
-import Icon from './Icon.jsx';
+import Logo from "./Logo.jsx";
+import useMediaQueryResize, { phone } from "../hooks/useMediaQuery.js";
+import Icon from "./Icon.jsx";
+
+import FormTrigger from "./FormTrigger.jsx";
 
 const StyledHeader = styled.div`
   display: flex;
@@ -73,7 +74,7 @@ const StyledLink = styled(Link)`
     /* color: var(--color-primary-light--2); */
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 50%;
@@ -91,6 +92,50 @@ const StyledLink = styled(Link)`
   }
 
   &:hover {
+    transform: translateY(-2.5px);
+    /* background-color: var(--color-accent1);
+    color: var(--color-primary-light); */
+    letter-spacing: 1px;
+    &::before {
+      width: 90%;
+    }
+  }
+`;
+
+const StyledNoLink = styled.a`
+  &,
+  &:visited {
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    padding: 0.4rem 0.8rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      /* bottom: -10px; */
+      width: 0;
+      height: 1px;
+      transition: all 0.5s;
+      background-image: linear-gradient(
+        var(--color-accent1),
+        var(--color-accent1-dark)
+      );
+    }
+  }
+
+  &:hover,
+  &:active {
     transform: translateY(-2.5px);
     /* background-color: var(--color-accent1);
     color: var(--color-primary-light); */
@@ -128,34 +173,34 @@ function Header({ children }) {
         {mediaPhone ? (
           <>
             <ToggleMenu onClick={handleToggle}>
-              <Icon color='#190482'>
+              <Icon color="#190482">
                 <CiMenuBurger>s</CiMenuBurger>
               </Icon>
             </ToggleMenu>
             <NavList
               style={
                 menuActive
-                  ? { display: 'flex' }
+                  ? { display: "flex" }
                   : {
-                      visibility: 'hidden',
-                      opacity: '0',
-                      pointerEvents: 'none',
+                      visibility: "hidden",
+                      opacity: "0",
+                      pointerEvents: "none",
                     }
               }
-              className={menuActive ? 'active' : ''}
+              className={menuActive ? "active" : ""}
             >
               <NavItem>
-                <StyledLink to='/' onClick={handleToggle}>
+                <StyledLink to="/" onClick={handleToggle}>
                   Acasa
                 </StyledLink>
               </NavItem>
               <NavItem>
-                <StyledLink to='servicii' onClick={handleToggle}>
+                <StyledLink to="servicii" onClick={handleToggle}>
                   Servicii
                 </StyledLink>
               </NavItem>
               <NavItem>
-                <StyledLink to='documente' onClick={handleToggle}>
+                <StyledLink to="documente" onClick={handleToggle}>
                   Documente utile
                 </StyledLink>
               </NavItem>
@@ -163,7 +208,7 @@ function Header({ children }) {
                 <StyledLink onClick={handleToggle}>Contact</StyledLink>
               </NavItem>
               <NavItem>
-                <StyledLink to='' onClick={handleToggle}>
+                <StyledLink to="" onClick={handleToggle}>
                   Avizier
                 </StyledLink>
               </NavItem>
@@ -172,19 +217,21 @@ function Header({ children }) {
         ) : (
           <NavList>
             <NavItem>
-              <StyledLink to='/'>Acasa</StyledLink>
+              <StyledLink to="/">Acasa</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to='servicii'>Servicii</StyledLink>
+              <StyledLink to="servicii">Servicii</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink to='documente'>Documente utile</StyledLink>
+              <StyledLink to="documente">Documente utile</StyledLink>
             </NavItem>
             <NavItem>
-              <StyledLink>Contact</StyledLink>
+              <FormTrigger>
+                <StyledNoLink>Contact</StyledNoLink>
+              </FormTrigger>
             </NavItem>
             <NavItem>
-              <StyledLink to=''>Avizier</StyledLink>
+              <StyledLink to="">Avizier</StyledLink>
             </NavItem>
           </NavList>
         )}

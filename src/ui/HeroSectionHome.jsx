@@ -1,16 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import {
   IoCallOutline,
   IoMailOutline,
   IoLogoInstagram,
   IoLogoFacebook,
-} from 'react-icons/io5';
+} from "react-icons/io5";
 
-import heroMain from '/assets/heroMain.jpg';
-import Heading from './Heading.jsx';
-import Button from './Button.jsx';
-import Icon from './Icon.jsx';
-import { RiFacebookBoxLine } from 'react-icons/ri';
+import heroMain from "/assets/heroMain.jpg";
+import Heading from "./Heading.jsx";
+import { Button, ButtonLink } from "./Button.jsx";
+import Icon from "./Icon.jsx";
+import { RiFacebookBoxLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { DrawerTrigger, Drawer } from "@/components/ui/drawer.jsx";
+import Form from "./FormTrigger.jsx";
 
 const StyledHeroSection = styled.div`
   display: flex;
@@ -82,7 +85,7 @@ const HeroMainImgBox = styled.div`
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
@@ -147,28 +150,39 @@ const HeroContactLinks = styled.ul`
     }
   }
 `;
-const ContactItem = styled.li``;
 
-const ContactLink = styled.a``;
+const StyledLink = styled(Link)`
+  display: block;
+  /* width: 100%; */
+  /* height: 100%; */
+`;
+
+// const ContactItem = styled.li``;
+
+// const ContactLink = styled.a``;
 
 function HeroSectionHome({ children }) {
   return (
     <StyledHeroSection>
       <HeroSectionLeft>
         <HeroContent>
-          <Heading as='h3' margin='0 0 2.4rem 0' variation='accent'>
+          <Heading as="h3" margin="0 0 2.4rem 0" variation="accent">
             Profesionalism & Incredere
           </Heading>
-          <Heading as='h1'>Administrare Imobile in grija noastra</Heading>
+          <Heading as="h1">Administrare Imobile in grija noastra</Heading>
           <HeroDescription>
             Servicii complete de administrare imobile. Totul mai facil si
             accesibil proprietarilor.
           </HeroDescription>
           <HeroAction>
-            <Button variation='secondary' to='servicii'>
-              Servicii
-            </Button>
-            <Button variation='primary'>Contact</Button>
+            <StyledLink to="servicii">
+              <Button variation="secondary">Servicii</Button>
+            </StyledLink>
+            <Form>
+              <DrawerTrigger>
+                <Button variation="primary">Contact</Button>
+              </DrawerTrigger>
+            </Form>
           </HeroAction>
         </HeroContent>
       </HeroSectionLeft>
@@ -179,28 +193,28 @@ function HeroSectionHome({ children }) {
         <HeroContactLinks>
           <li>
             <a>
-              <Icon hovercolor='#7c2d24' color={'#626262'} sizes='medium'>
+              <Icon hovercolor="#7c2d24" color={"#626262"} sizes="medium">
                 <IoCallOutline></IoCallOutline>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon hovercolor='#7c2d24' color={'#626262'} sizes='medium'>
+              <Icon hovercolor="#7c2d24" color={"#626262"} sizes="medium">
                 <IoMailOutline></IoMailOutline>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon color={'#626262'} hovercolor='#7c2d24'>
+              <Icon color={"#626262"} hovercolor="#7c2d24">
                 <IoLogoInstagram></IoLogoInstagram>
               </Icon>
             </a>
           </li>
           <li>
             <a>
-              <Icon color={'#626262'} hovercolor='#7c2d24' sizes='medium'>
+              <Icon color={"#626262"} hovercolor="#7c2d24" sizes="medium">
                 <IoLogoFacebook></IoLogoFacebook>
               </Icon>
             </a>
