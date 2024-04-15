@@ -4,6 +4,11 @@ import { CiCircleCheck } from 'react-icons/ci'
 import Heading from '@/ui/Heading.jsx'
 import Row from '@/ui/Row.jsx'
 import Icon from '@/ui/Icon.jsx'
+import { RiCheckboxMultipleFill } from 'react-icons/ri'
+import { IoDocumentTextOutline } from 'react-icons/io5'
+import { GiReceiveMoney } from 'react-icons/gi'
+import { VscTools } from 'react-icons/vsc'
+import IconBackground from '@/ui/IconBackground.jsx'
 
 const StyledServicii = styled.div`
     padding: 6rem 0;
@@ -30,6 +35,9 @@ const Accordion = styled.div`
 const AccordionMenu = styled.ul`
     display: flex;
     list-style: none;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 `
 const AccordionItem = styled.li`
     padding: 1rem 2rem;
@@ -41,6 +49,9 @@ const AccordionItem = styled.li`
     font-size: 1.4rem;
     width: auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 
     @media (max-width: 850px) {
         padding: 1rem;
@@ -133,6 +144,13 @@ function Servicii() {
                         className={currentContent === 1 ? 'active' : ''}
                         onClick={() => setCurrentContent(1)}
                     >
+                        <Icon
+                            color={'#7752FE'}
+                            hovercolor="#140368"
+                            sizes="tiny"
+                        >
+                            <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
+                        </Icon>
                         Administrare Completa
                     </AccordionItem>
                     <AccordionItem
@@ -140,7 +158,22 @@ function Servicii() {
                         className={currentContent === 2 ? 'active' : ''}
                         onClick={() => setCurrentContent(2)}
                     >
-                        Contabilitate + Casierie
+                        <Icon
+                            color={'#7752FE'}
+                            hovercolor="#140368"
+                            sizes="tiny"
+                        >
+                            <IoDocumentTextOutline></IoDocumentTextOutline>
+                        </Icon>
+                        Contabilitate +
+                        <Icon
+                            color={'#7752FE'}
+                            hovercolor="#140368"
+                            sizes="tiny"
+                        >
+                            <GiReceiveMoney></GiReceiveMoney>
+                        </Icon>
+                        Casierie
                     </AccordionItem>
 
                     <AccordionItem
@@ -148,6 +181,13 @@ function Servicii() {
                         className={currentContent === 3 ? 'active' : ''}
                         onClick={() => setCurrentContent(3)}
                     >
+                        <Icon
+                            color={'#7752FE'}
+                            hovercolor="#140368"
+                            sizes="tiny"
+                        >
+                            <VscTools></VscTools>
+                        </Icon>
                         Administrare tehnica
                     </AccordionItem>
                 </AccordionMenu>
