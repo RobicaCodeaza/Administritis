@@ -9,7 +9,7 @@ const StyledServicii = styled.div`
     padding: 6rem 0;
     border-top: 2px solid var(--color-primary-light--1);
     background-color: var(--color-white);
-    /* min-height: 90dvh; */
+    min-height: 90dvh;
 `
 const Accordion = styled.div`
     margin-top: 1.2rem;
@@ -19,7 +19,12 @@ const Accordion = styled.div`
     flex-direction: column;
     gap: 3.2rem;
     /* align-content: center; */
-    padding: 4rem 8rem;
+    padding: 2rem 8rem;
+    max-height: 100%;
+
+    @media (max-width: 850px) {
+        padding: 2rem 2rem;
+    }
 `
 
 const AccordionMenu = styled.ul`
@@ -34,8 +39,12 @@ const AccordionItem = styled.li`
     transition: all 0.3s;
     text-transform: uppercase;
     font-size: 1.4rem;
-    width: 25rem;
+    width: auto;
     text-align: center;
+
+    @media (max-width: 850px) {
+        padding: 1rem;
+    }
 
     &.active {
         color: var(--color-white);
@@ -44,34 +53,67 @@ const AccordionItem = styled.li`
 `
 
 const AccordionContentList = styled.ul`
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-primary-light--1);
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    height: 100%;
+    transition: all 0.3s;
+    width: 100%;
 `
 const AccordionContentItem = styled.li`
     display: flex;
-    gap: 0.25rem;
-    min-width: 35rem;
-    width: max-content;
+    gap: 0.5rem;
+    align-items: center;
+    /* min-width: 35rem; */
+    width: 100%;
     padding: 0.5rem 1rem;
-    /* background-color: red; */
+    letter-spacing: 1px;
 `
 
 const contentAccordion = {
     content1: [
-        'bullet1',
-        'bullet2',
-        'bullet2',
-        'bullet2',
-        'bullet2',
-        'bullet2',
-        'bullet2',
-        'bullet2',
-        'bullet2',
+        'Acces online pentru proprietari',
+        'Intocmirea listelor de plata in conformitate cu prevederile legale',
+        'Realizarea Registrelor de Evidenta: Fond Rulment si Fond Reparatii',
+        'Intocmire Registre Jurnal, Banca si Casa',
+        'Formarea si Depunerea declaratiilor fiscale - remuneratia asociatiei la Administratia financiara',
+        'Intocmirea statelor de plata pentru remuneratia Asociatiei',
+        'Realizarea ordinelor de plata',
+        'Incasarea cotelor de intretinere  - fiecare unitate locativa',
+        'Plata facturilor catre furnizorii de utilitati & prestatorii de servicii',
+        'Plata personalului angajat',
+        'Preluarea sesizarilor venite din partea proprietarilor',
+        'Inspectarea periodica a proprietatii comune in vederea fixarii avariilor/defectelor',
+        'Supravegherea lucrarilor de intretinere/reparatie',
+        'Controlul indeplinirii obligatiilor ale personalului angajat: curatenie, evacuare de gunoi menajer + alte activitati',
+        'Comunicarea si instiintareaa comitetului executiv cu privire la masurile necesare pentru efectuarea lucrarilor de intretinere/reparatie.',
+        'Verificarea facturarii corecte in functie de furnizori',
+        'Achizitia materialelor necesare intretinerii si curateniei imobilului',
     ],
-    content2: 'Content2',
-    content3: 'Content3',
-    content4: 'Content4',
+    content2: [
+        'Acces online pentru proprietari',
+        'Intocmirea listelor de plata in conformitate cu prevederile legale',
+        'Realizarea Registrelor de Evidenta: Fond Rulment si Fond Reparatii',
+        'Intocmire Registre Jurnal, Banca si Casa',
+        'Formarea si Depunerea declaratiilor fiscale - remuneratia asociatiei la Administratia financiara',
+        'Intocmirea statelor de plata pentru remuneratia Asociatiei',
+        'Realizarea ordinelor de plata',
+        'Incasarea cotelor de intretinere  - fiecare unitate locativa',
+        'Plata facturilor catre furnizorii de utilitati & prestatorii de servicii',
+        'Plata personalului angajat',
+    ],
+    content3: [
+        'Preluarea sesizarilor venite din partea proprietarilor',
+        'Inspectarea periodica a proprietatii comune in vederea fixarii avariilor/defectelor',
+        'Supravegherea lucrarilor de intretinere/reparatie',
+        'Controlul indeplinirii obligatiilor ale personalului angajat: curatenie, evacuare de gunoi menajer + alte activitati',
+        'Comunicarea si instiintareaa comitetului executiv cu privire la masurile necesare pentru efectuarea lucrarilor de intretinere/reparatie.',
+        'Verificarea facturarii corecte in functie de furnizori',
+        'Achizitia materialelor necesare intretinerii si curateniei imobilului',
+    ],
 }
 
 function Servicii() {
@@ -98,19 +140,13 @@ function Servicii() {
                         className={currentContent === 2 ? 'active' : ''}
                         onClick={() => setCurrentContent(2)}
                     >
-                        Contabilitate
+                        Contabilitate + Casierie
                     </AccordionItem>
+
                     <AccordionItem
                         content="3"
                         className={currentContent === 3 ? 'active' : ''}
                         onClick={() => setCurrentContent(3)}
-                    >
-                        Casierie
-                    </AccordionItem>
-                    <AccordionItem
-                        content="4"
-                        className={currentContent === 4 ? 'active' : ''}
-                        onClick={() => setCurrentContent(4)}
                     >
                         Administrare tehnica
                     </AccordionItem>
@@ -118,7 +154,7 @@ function Servicii() {
                 <AccordionContentList>
                     {content.map((el) => (
                         <AccordionContentItem key={el}>
-                            <Icon>
+                            <Icon color="#7c993f" sizes="tiny">
                                 <CiCircleCheck></CiCircleCheck>
                             </Icon>
                             {el}
