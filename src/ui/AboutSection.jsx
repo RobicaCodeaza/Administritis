@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import Container from './Container.jsx';
-import Heading from './Heading.jsx';
-import Row from './Row.jsx';
-import Grid from './Grid.jsx';
-import aboutPhoto from '/assets/aboutUs.jpg';
+import styled from "styled-components";
+import Container from "./Container.jsx";
+import Heading from "./Heading.jsx";
+import Row from "./Row.jsx";
+import Grid from "./Grid.jsx";
+import aboutPhoto from "/assets/aboutUs.jpg";
 
-import { GrOptimize, GrSecure } from 'react-icons/gr';
-import { TiCloudStorageOutline } from 'react-icons/ti';
-import Icon from './Icon.jsx';
-import IconBackground from './IconBackground.jsx';
+import { GrOptimize, GrSecure } from "react-icons/gr";
+import { TiCloudStorageOutline } from "react-icons/ti";
+import Icon from "./Icon.jsx";
+import IconBackground from "./IconBackground.jsx";
 
 const StyledAboutSection = styled.section`
   padding: 12rem 0;
@@ -57,12 +57,12 @@ function AboutSection() {
   return (
     <StyledAboutSection>
       <Container>
-        <Grid columns='1fr 1fr' margin='0 0 4.8rem 0' gap='0 4.4rem'>
-          <Row size='tiny'>
-            <Heading as='h4' variation='accent'>
+        <Grid columns="1fr 1fr" margin="0 0 4.8rem 0" gap="0 4.4rem">
+          <Row $size="tiny">
+            <Heading as="h4" variation="accent">
               Scopul
             </Heading>
-            <Heading as='h2'>De ce sa ne alegi pe noi?</Heading>
+            <Heading as="h2">De ce sa ne alegi pe noi?</Heading>
           </Row>
           <AboutDescription>
             Serviciile noastre de administrare a imobilelor se desfasoara in
@@ -70,17 +70,17 @@ function AboutSection() {
             promptitudinea si siguranta serviciilor.
           </AboutDescription>
         </Grid>
-        <Grid columns='1fr 1fr' gap='0 4.4rem'>
+        <Grid columns="1fr 1fr" gap="0 4.4rem">
           <AboutPhoto src={aboutPhoto}></AboutPhoto>
           <AboutUsList>
             <AboutUsBullet>
               {/* <Icon></Icon> */}
-              <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+              <IconBackground color="#C2D9FF" size="large">
+                <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                   <GrOptimize></GrOptimize>
                 </Icon>
               </IconBackground>
-              <Heading as='h4' margin='1.2rem 0 0.8rem 0'>
+              <Heading as="h4" margin="1.2rem 0 0.8rem 0">
                 Prioritate
               </Heading>
               <AboutDescription>
@@ -89,12 +89,12 @@ function AboutSection() {
               </AboutDescription>
             </AboutUsBullet>
             <AboutUsBullet>
-              <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+              <IconBackground color="#C2D9FF" size="large">
+                <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                   <GrSecure></GrSecure>
                 </Icon>
               </IconBackground>
-              <Heading as='h4' margin='1.2rem 0 0.8rem 0'>
+              <Heading as="h4" margin="1.2rem 0 0.8rem 0">
                 Protectie
               </Heading>
               <AboutDescription>
@@ -104,12 +104,12 @@ function AboutSection() {
               </AboutDescription>
             </AboutUsBullet>
             <AboutUsBullet>
-              <IconBackground color='#C2D9FF' size='large'>
-                <Icon color={'#7752FE'} hovercolor='#140368' sizes='tiny'>
+              <IconBackground color="#C2D9FF" size="large">
+                <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                   <TiCloudStorageOutline></TiCloudStorageOutline>
                 </Icon>
               </IconBackground>
-              <Heading as='h4' margin='1.2rem 0 0.8rem 0'>
+              <Heading as="h4" margin="1.2rem 0 0.8rem 0">
                 Acces Facil
               </Heading>
               <AboutDescription>

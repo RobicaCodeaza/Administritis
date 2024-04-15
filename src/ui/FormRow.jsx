@@ -4,7 +4,7 @@ function FormRow({ error, children, label }) {
       {label && (
         <label
           htmlFor={children.props.id}
-          className="text-greyDark 
+          className="text-greyDark1 
          text-[16px] tracking-wide"
         >
           {label}

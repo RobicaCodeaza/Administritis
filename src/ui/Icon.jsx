@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const sizes = {
   tiny: css`
@@ -28,23 +28,23 @@ const StyledIcon = styled.div`
 
   & svg {
     transition: all 0.3s;
-    color: ${(props) => props.color};
-    ${(props) => sizes[props.sizes]}
+    color: ${(props) => props?.$color};
+    ${(props) => sizes[props?.$sizes]}
 
     &:hover {
-      color: ${(props) => props.hovercolor} !important;
+      color: ${(props) => props?.$hovercolor} !important;
     }
   }
 `;
 
 function Icon({ children, color, hovercolor, sizes }) {
   return (
-    <StyledIcon color={color} hovercolor={hovercolor} sizes={sizes}>
+    <StyledIcon $color={color} $hovercolor={hovercolor} $sizes={sizes}>
       {children}
     </StyledIcon>
   );
 }
 
-Icon.defaultProps = { sizes: 'medium' };
+Icon.defaultProps = { sizes: "medium" };
 
 export default Icon;

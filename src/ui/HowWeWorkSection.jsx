@@ -1,13 +1,13 @@
-import styled from 'styled-components';
-import Container from './Container.jsx';
-import Grid from './Grid.jsx';
-import Heading from './Heading.jsx';
-import Row from './Row.jsx';
-import photo1 from '/assets/intalnire.jpg';
-import photo2 from '/assets/elaborare.jpg';
-import photo3 from '/assets/implementare.jpg';
-import photo4 from '/assets/monitorizare.jpg';
-import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js';
+import styled from "styled-components";
+import Container from "./Container.jsx";
+import Grid from "./Grid.jsx";
+import Heading from "./Heading.jsx";
+import Row from "./Row.jsx";
+import photo1 from "/assets/intalnire.jpg";
+import photo2 from "/assets/elaborare.jpg";
+import photo3 from "/assets/implementare.jpg";
+import photo4 from "/assets/monitorizare.jpg";
+import useMediaQueryResize, { phone } from "../hooks/useMediaQuery.js";
 
 const StyledHowWeWorkSection = styled.div`
   padding: 12rem 0rem 25rem 0;
@@ -32,7 +32,7 @@ const StepItem = styled.div`
   }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -42,7 +42,7 @@ const StepItem = styled.div`
     box-shadow: 0 1rem 2.5rem 0.2rem var(--shadow-lightest);
   }
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -132,21 +132,21 @@ function HowWeWorkSection() {
   // else console.log('smth bigger');
 
   return (
-    <StyledHowWeWorkSection name='colaborare'>
+    <StyledHowWeWorkSection name="colaborare">
       <Container>
-        <Grid margin='0 0 4.8rem 0' columns='1fr 1fr'>
-          <Row size='tiny'>
-            <Heading as='h4' variation='accent'>
+        <Grid margin="0 0 4.8rem 0" columns="1fr 1fr">
+          <Row $size="tiny">
+            <Heading as="h4" variation="accent">
               Abordare
             </Heading>
-            <Heading as='h2'>Cum vom comunica</Heading>
+            <Heading as="h2">Cum vom comunica</Heading>
           </Row>
         </Grid>
         <StepList>
           <StepItem>
             <ItemPhoto src={photo1}></ItemPhoto>
             {mediaPhone && <ItemOverlay></ItemOverlay>}
-            <Row size='small' justifycontent='center'>
+            <Row $size="small" $justifycontent="center">
               <ItemStep>Pasul 1</ItemStep>
               <ItemTitle>Întâlnirea inițială</ItemTitle>
               <ItemDescription>
@@ -159,7 +159,7 @@ function HowWeWorkSection() {
             <ItemPhoto src={photo2}></ItemPhoto>
             {mediaPhone && <ItemOverlay></ItemOverlay>}
 
-            <Row size='small' justifycontent='center'>
+            <Row $size="small" $justifycontent="center">
               <ItemStep>Pasul 2</ItemStep>
               <ItemTitle>Elaborarea planului</ItemTitle>
               <ItemDescription>
@@ -171,7 +171,7 @@ function HowWeWorkSection() {
           <StepItem>
             <ItemPhoto src={photo3}></ItemPhoto>
             {mediaPhone && <ItemOverlay></ItemOverlay>}
-            <Row size='small' justifycontent='center'>
+            <Row $size="small" $justifycontent="center">
               <ItemStep>Pasul 3</ItemStep>
               <ItemTitle>Implementarea planului</ItemTitle>
               <ItemDescription>
@@ -183,7 +183,7 @@ function HowWeWorkSection() {
           <SpacedStepItem>
             <ItemPhoto src={photo4}></ItemPhoto>
             {mediaPhone && <ItemOverlay></ItemOverlay>}
-            <Row size='small' justifycontent='center'>
+            <Row $size="small" $justifycontent="center">
               <ItemStep>Pasul 4</ItemStep>
               <ItemTitle>Monitorizare</ItemTitle>
               <ItemDescription>

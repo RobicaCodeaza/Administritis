@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const sizes = {
   tiny: css`
@@ -21,46 +21,46 @@ const sizes = {
 const Row = styled.div`
   display: flex;
   ${(props) =>
-    props.justifycontent !== '' &&
+    props.$justifycontent !== "" &&
     css`
-      justify-content: ${(props) => props.justifycontent};
+      justify-content: ${(props) => props.$justifycontent};
     `}
   ${(props) =>
-    props.justify !== '' &&
+    props.$justify !== "" &&
     css`
-      justify-items: ${(props) => props.justify};
+      justify-items: ${(props) => props.$justify};
     `}
 
   ${(props) =>
-    props.align !== '' &&
+    props.$align !== "" &&
     css`
       /* flex-wrap: nowrap; */
-      align-items: ${(props) => props.align};
+      align-items: ${(props) => props.$align};
     `}
   ${(props) =>
-    props.aligncontent !== '' &&
+    props.$aligncontent !== "" &&
     css`
-      align-content: ${(props) => props.aligncontent};
+      align-content: ${(props) => props.$aligncontent};
     `}
-  ${(props) => sizes[props.size]};
+  ${(props) => sizes[props.$size]};
   ${(props) =>
-    props.type === 'horizontal' &&
+    props.$type === "horizontal" &&
     css`
       align-items: center;
     `}
   ${(props) =>
-    props.type === 'vertical' &&
+    props.$type === "vertical" &&
     css`
       flex-direction: column;
     `};
 `;
 Row.defaultProps = {
-  type: 'vertical',
-  size: 'medium',
-  justify: '',
-  align: '',
-  justifycontent: '',
-  aligncontent: '',
+  $type: "vertical",
+  $size: "medium",
+  $justify: "",
+  $align: "",
+  $justifycontent: "",
+  $aligncontent: "",
 };
 
 export default Row;

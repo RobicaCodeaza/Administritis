@@ -59,8 +59,8 @@ const buttonStyles = css`
   display: block;
   border: none;
   text-decoration: none;
-  ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variation]}
+  ${(props) => sizes[props.$size]}
+  ${(props) => variations[props.$variation]}
 `;
 
 const Button = styled.button`
@@ -71,5 +71,12 @@ const ButtonLink = styled(Link)`
   ${buttonStyles}
 `;
 
-Button.defaultProps = { variation: "primary", size: "large" };
-export { Button, ButtonLink };
+const ButtonTrigger = styled.span`
+  display: block;
+  ${buttonStyles}
+`;
+
+Button.defaultProps = { $variation: "primary", $size: "large" };
+ButtonTrigger.defaultProps = { $variation: "primary", $size: "large" };
+ButtonLink.defaultProps = { $variation: "primary", $size: "large" };
+export { Button, ButtonLink, ButtonTrigger };

@@ -5,15 +5,13 @@ import {
   IoLogoInstagram,
   IoLogoFacebook,
 } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 import heroMain from "/assets/heroMain.jpg";
 import Heading from "./Heading.jsx";
-import { Button, ButtonLink } from "./Button.jsx";
+import { Button, ButtonTrigger } from "./Button.jsx";
 import Icon from "./Icon.jsx";
-import { RiFacebookBoxLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
-import { DrawerTrigger, Drawer } from "@/components/ui/drawer.jsx";
-import Form from "./FormTrigger.jsx";
+import FormTrigger from "./FormTrigger.jsx";
 
 const StyledHeroSection = styled.div`
   display: flex;
@@ -48,7 +46,6 @@ const HeroSectionRight = styled.div`
     justify-content: center;
   }
   @media (max-width: 850px) {
-    /* flex: 0 1 30%; */
   }
   @media (max-width: 600px) {
     justify-content: space-around;
@@ -63,8 +60,6 @@ const HeroMainImgBox = styled.div`
   left: -50%;
   top: 50%;
   transform: translate(5vw, -50%);
-  /* height: 30vw;
-  width: 30vw; */
   width: 30vw;
   height: 30vw;
   box-shadow: 0 0.75rem 1.5rem 0 var(--shadow);
@@ -143,9 +138,7 @@ const HeroContactLinks = styled.ul`
 
     & a {
       display: block;
-      /* display: flex; */
-      /* align-items: center; */
-      /* justify-content: center; */
+
       cursor: pointer;
     }
   }
@@ -153,13 +146,7 @@ const HeroContactLinks = styled.ul`
 
 const StyledLink = styled(Link)`
   display: block;
-  /* width: 100%; */
-  /* height: 100%; */
 `;
-
-// const ContactItem = styled.li``;
-
-// const ContactLink = styled.a``;
 
 function HeroSectionHome({ children }) {
   return (
@@ -176,13 +163,11 @@ function HeroSectionHome({ children }) {
           </HeroDescription>
           <HeroAction>
             <StyledLink to="servicii">
-              <Button variation="secondary">Servicii</Button>
+              <Button $variation="secondary">Servicii</Button>
             </StyledLink>
-            <Form>
-              <DrawerTrigger>
-                <Button variation="primary">Contact</Button>
-              </DrawerTrigger>
-            </Form>
+            <FormTrigger>
+              <ButtonTrigger $variation="primary">Contact</ButtonTrigger>
+            </FormTrigger>
           </HeroAction>
         </HeroContent>
       </HeroSectionLeft>

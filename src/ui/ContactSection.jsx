@@ -70,6 +70,7 @@ const ContactTitle = styled.p`
 `;
 
 const ContactDescription = styled.p`
+  display: block;
   color: var(--color-white);
   font-size: 1.6rem;
   font-weight: 400;
@@ -77,7 +78,7 @@ const ContactDescription = styled.p`
   margin: 1.2rem 0 2.4rem 0;
 `;
 
-const ContactButton = styled.button`
+const ContactButton = styled.span`
   font-size: 1.5rem;
   font-weight: 500;
   padding: 1rem 4rem;

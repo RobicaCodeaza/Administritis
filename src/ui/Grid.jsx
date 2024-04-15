@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const StyledGrid = styled.div`
   display: grid;
@@ -8,23 +8,23 @@ const StyledGrid = styled.div`
   align-items: center;
   transition: none;
   margin: ${(props) => (props.$margin ? props.$margin : 0)};
-  ${(props) => (props.media ? props.media : '')}
+  ${(props) => (props.$media ? props.$media : "")}
 
   @media (max-width:600px) {
     display: grid;
     grid-template-columns: 1fr;
-    gap: ${(props) => props.$gap.replace('0', '')};
+    gap: ${(props) => props.$gap.replace("0", "")};
   }
 `;
 
 function Grid({ children, columns, margin, gap, media }) {
   return (
-    <StyledGrid $columns={columns} $margin={margin} $gap={gap} media={media}>
+    <StyledGrid $columns={columns} $margin={margin} $gap={gap} $media={media}>
       {children}
     </StyledGrid>
   );
 }
 
-Grid.defaultProps = { gap: '5.6rem' };
+Grid.defaultProps = { gap: "5.6rem" };
 
 export default Grid;

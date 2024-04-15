@@ -100,7 +100,7 @@ function FeaturesSection() {
       <Container>
         <Grid margin="0 0 4.8rem 0" gap="0" columns="1fr 1fr">
           <Row>
-            <Row size="tiny">
+            <Row $size="tiny">
               <Heading as="h4" variation="accent">
                 Servicii
               </Heading>
@@ -111,10 +111,10 @@ function FeaturesSection() {
           <span></span>
         </Grid>
         <Grid columns="1fr 1fr" media={gridMedia}>
-          <Row align="start" size="big">
+          <Row $align="start" $size="big">
             <FeaturesContainer>
               <FeaturesBox>
-                <Row type="horizontal" size="medium">
+                <Row $type="horizontal" $size="medium">
                   <IconBackground color="#C2D9FF" size="large">
                     <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <RiCheckboxMultipleFill></RiCheckboxMultipleFill>
@@ -133,7 +133,7 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type="horizontal" size="medium">
+                <Row $type="horizontal" $size="medium">
                   <IconBackground color="#C2D9FF" size="large">
                     <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <IoDocumentTextOutline></IoDocumentTextOutline>
@@ -147,7 +147,7 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type="horizontal" size="medium">
+                <Row $type="horizontal" $size="medium">
                   <IconBackground color="#C2D9FF" size="large">
                     <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <GiReceiveMoney></GiReceiveMoney>
@@ -161,7 +161,7 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
               <FeaturesBox>
-                <Row type="horizontal" size="medium">
+                <Row $type="horizontal" $size="medium">
                   <IconBackground color="#C2D9FF" size="large">
                     <Icon color={"#7752FE"} hovercolor="#140368" sizes="tiny">
                       <VscTools></VscTools>
@@ -174,7 +174,7 @@ function FeaturesSection() {
                 </FeatureDescription>
               </FeaturesBox>
             </FeaturesContainer>
-            <Button variation="secondary" to="servicii">
+            <Button $variation="secondary" to="servicii">
               Mai multe detalii
             </Button>
           </Row>

@@ -1,9 +1,12 @@
-function Form({ children }) {
-  return (
-    <form className="mb-4 mt-1  flex w-full flex-col gap-12  gap-y-12 px-32  py-10  xl:w-3/4 xl:grid-cols-2 2xl:grid">
-      {children}
-    </form>
-  );
+function Form({ children, onSubmit }) {
+    return (
+        <form
+            onSubmit={onSubmit}
+            className="lg: mb-4  mt-1 flex h-[50rem] w-full flex-col gap-7  overflow-auto  px-5  py-5 sm:h-auto sm:py-8 lg:w-3/4 xl:w-1/2   xl:py-6"
+        >
+            {children}
+        </form>
+    )
 }
 
-export default Form;
+export default Form
