@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -125,6 +125,11 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+.section--hidden{
+  opacity:0;
+  transform:translateY(10rem);
+}
 
-`;
-export default GlobalStyles;
+`
+
+export default GlobalStyles

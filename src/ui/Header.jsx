@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CiMenuBurger } from 'react-icons/ci'
+import { RiMenu5Fill, RiMenuFill } from 'react-icons/ri'
 
 import Logo from './Logo.jsx'
 import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js'
@@ -18,6 +18,17 @@ const StyledHeader = styled.div`
     /* border-bottom: 2px solid var(--color-grey--1); */
     justify-content: space-between;
     /* gap: 10rem; */
+    transition: all 0.3s;
+    border-bottom: 2px solid var(--color-primary-light);
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        z-index: 5;
+        border-bottom: 2px solid var(--color-primary-light--1);
+    }
 `
 
 const StyledNav = styled.nav`
@@ -167,14 +178,18 @@ function Header({ children }) {
     }
 
     return (
-        <StyledHeader>
+        <StyledHeader id="nav">
             <Logo></Logo>
             <StyledNav>
                 {mediaPhone ? (
                     <>
                         <ToggleMenu onClick={handleToggle}>
                             <Icon color="#190482">
-                                <CiMenuBurger>s</CiMenuBurger>
+                                {menuActive ? (
+                                    <RiMenuFill>s</RiMenuFill>
+                                ) : (
+                                    <RiMenu5Fill>s</RiMenu5Fill>
+                                )}
                             </Icon>
                         </ToggleMenu>
                         <NavList

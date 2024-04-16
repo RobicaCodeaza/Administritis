@@ -52,7 +52,7 @@ function FormTrigger({ children }) {
     return (
         <Drawer>
             <DrawerTrigger>{children}</DrawerTrigger>
-            <DrawerContent className="mx-auto  flex  items-center  justify-items-center bg-white px-10 py-5 2xl:px-32 ">
+            <DrawerContent className="mx-auto  flex flex-col items-center  justify-items-center bg-white px-10 py-5 2xl:px-32 ">
                 <DrawerClose ref={close} className="absolute  right-6 top-6">
                     <Icon hovercolor="#7c2d24" color={'#626262'} sizes="medium">
                         <IoCloseOutline></IoCloseOutline>

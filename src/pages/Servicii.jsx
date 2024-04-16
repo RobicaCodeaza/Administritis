@@ -11,7 +11,7 @@ import { VscTools } from 'react-icons/vsc'
 import IconBackground from '@/ui/IconBackground.jsx'
 
 const StyledServicii = styled.div`
-    padding: 6rem 0;
+    padding: 14rem 0;
     border-top: 2px solid var(--color-primary-light--1);
     background-color: var(--color-white);
     min-height: 90dvh;
@@ -127,6 +127,14 @@ const contentAccordion = {
     ],
 }
 
+const StyledLine = styled.img`
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -20px;
+    object-fit: cover;
+`
 function Servicii() {
     const [currentContent, setCurrentContent] = useState(1)
 
@@ -135,7 +143,10 @@ function Servicii() {
     return (
         <StyledServicii>
             <Row $type="horizontal" $justifycontent="center">
-                <Heading as="h3">Servicii</Heading>
+                <Heading as="h3">
+                    Servicii
+                    <StyledLine src="/assets/underline_straight.png"></StyledLine>
+                </Heading>
             </Row>
             <Accordion>
                 <AccordionMenu>
