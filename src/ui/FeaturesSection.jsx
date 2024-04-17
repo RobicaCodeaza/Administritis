@@ -137,7 +137,10 @@ function FeaturesSection() {
                             </Heading>
                             <Heading as="h2">
                                 Ceea ce oferim
-                                <StyledLine src="/assets/underline_curved.png"></StyledLine>
+                                <StyledLine
+                                    alt="Linie curbata pentru accent"
+                                    src="/assets/underline_curved.png"
+                                ></StyledLine>
                             </Heading>
                         </Row>
                         <Grid></Grid>

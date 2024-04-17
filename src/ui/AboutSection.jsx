@@ -95,7 +95,10 @@ function AboutSection() {
                         </Heading>
                         <Heading as="h2">
                             De ce sa ne alegi pe noi?
-                            <StyledLine src="/assets/underline_curved.png"></StyledLine>
+                            <StyledLine
+                                alt="Linie curbata pentru accent"
+                                src="/assets/underline_curved.png"
+                            ></StyledLine>
                         </Heading>
                     </Row>
                     <AboutDescription>

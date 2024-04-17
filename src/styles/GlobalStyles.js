@@ -38,13 +38,6 @@ const GlobalStyles = createGlobalStyle`
 --color-secondary--3:#C2D9FF;
 
 
-/* //tertiary
---color-tertiary:#CEFF69;
---color-tertiary-dark:#7c993f;
---color-tertiary-dark--1:#a5cc54;
---color-tertiary-light:#ebffc3;
---color-tertiary-light--1:#e2ffa5; */
-
 //accent
 --color-accent1:#F75A47;
 --color-accent1-dark:#7c2d24;

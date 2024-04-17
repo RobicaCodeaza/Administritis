@@ -196,6 +196,55 @@ const StyledNoLink = styled.a`
     }
 `
 
+const StyledNoHref = styled.span`
+    & {
+        display: block;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: var(--color-accent2-light);
+        border: 1px solid transparent;
+        transition: all 0.3s;
+        padding: 0.4rem 0.8rem;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        /* border-radius: 0.5rem; */
+
+        /* background-color: #201658; */
+        /* color: var(--color-primary-light--2); */
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            /* bottom: -10px; */
+            width: 0;
+            height: 1px;
+            transition: all 0.3s;
+            background-image: linear-gradient(
+                var(--color-accent1),
+                var(--color-accent1-dark)
+            );
+        }
+    }
+
+    &:hover,
+    &:active {
+        transform: translateY(-1.5px);
+        color: #fbada3;
+        letter-spacing: 1px;
+        &::before {
+            width: 15rem;
+            @media (max-width: 600px) {
+                width: 5rem;
+            }
+        }
+    }
+`
+
 function Footer() {
     const goTo = function (to) {
         if (to === 'top') {
@@ -273,7 +322,7 @@ function Footer() {
                     <StyledLink to="servicii">Servicii</StyledLink>
                     <StyledLink to="documente">Documente utile</StyledLink>
                     <FormTrigger>
-                        <StyledNoLink>Contact</StyledNoLink>
+                        <StyledNoHref href="">Contact</StyledNoHref>
                     </FormTrigger>
                     <StyledNoLink href="https://www.e-bloc.ro" target="_blank">
                         Avizier

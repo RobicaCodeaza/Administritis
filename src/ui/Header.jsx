@@ -157,6 +157,49 @@ const StyledNoLink = styled.a`
     }
 `
 
+const StyledNoHref = styled.span`
+    & {
+        display: block;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: var(--color-primary-dark);
+        border: 1px solid transparent;
+        transition: all 0.3s;
+        padding: 0.4rem 0.8rem;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            /* bottom: -10px; */
+            width: 0;
+            height: 1px;
+            transition: all 0.5s;
+            background-image: linear-gradient(
+                var(--color-accent1),
+                var(--color-accent1-dark)
+            );
+        }
+    }
+
+    &:hover,
+    &:active {
+        transform: translateY(-2.5px);
+        /* background-color: var(--color-accent1);
+    color: var(--color-primary-light); */
+        letter-spacing: 1px;
+        &::before {
+            width: 90%;
+        }
+    }
+`
+
 const ToggleMenu = styled.button`
     display: flex;
     align-items: center;
@@ -236,9 +279,9 @@ function Header({ children }) {
                             </NavItem>
                             <NavItem>
                                 <FormTrigger>
-                                    <StyledNoLink onClick={handleToggle}>
+                                    <StyledNoHref onClick={handleToggle}>
                                         Contact
-                                    </StyledNoLink>
+                                    </StyledNoHref>
                                 </FormTrigger>
                             </NavItem>
                             <NavItem>
@@ -267,7 +310,7 @@ function Header({ children }) {
                         </NavItem>
                         <NavItem>
                             <FormTrigger>
-                                <StyledNoLink>Contact</StyledNoLink>
+                                <StyledNoHref>Contact</StyledNoHref>
                             </FormTrigger>
                         </NavItem>
                         <NavItem>

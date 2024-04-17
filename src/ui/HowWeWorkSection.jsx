@@ -176,7 +176,10 @@ function HowWeWorkSection() {
                         </Heading>
                         <Heading as="h2">
                             Cum vom comunica
-                            <StyledLine src="/assets/underline_curved.png"></StyledLine>
+                            <StyledLine
+                                src="/assets/underline_curved.png"
+                                alt="Linie curbata pentru accent"
+                            ></StyledLine>
                         </Heading>
                     </Row>
                 </Grid>
@@ -217,20 +220,26 @@ function HowWeWorkSection() {
                         </Row>
                     </SpacedStepItem>
                     <StepItem>
-                        <ItemPhoto src={photo3}></ItemPhoto>
+                        <ItemPhoto
+                            src={photo3}
+                            alt="Doua persoane ce incheie un contract"
+                        ></ItemPhoto>
                         {mediaPhone && <ItemOverlay></ItemOverlay>}
                         <Row $size="small" $justifycontent="center">
                             <ItemStep>Pasul 3</ItemStep>
                             <ItemTitle>Implementarea planului</ItemTitle>
                             <ItemDescription>
-                                Semnarea contractului si initierea serviciilor,
-                                continuand cu permanenta comunicare si
+                                Semnarea contractului si inițierea serviciilor,
+                                continuând cu permanenta comunicare și
                                 raportare.
                             </ItemDescription>
                         </Row>
                     </StepItem>
                     <SpacedStepItem>
-                        <ItemPhoto src={photo4}></ItemPhoto>
+                        <ItemPhoto
+                            src={photo4}
+                            alt="Clepsidra ce seminifica monitorizarea continua"
+                        ></ItemPhoto>
                         {mediaPhone && <ItemOverlay></ItemOverlay>}
                         <Row $size="small" $justifycontent="center">
                             <ItemStep>Pasul 4</ItemStep>

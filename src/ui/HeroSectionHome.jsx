@@ -230,7 +230,7 @@ function HeroSectionHome({ children }) {
                 </HeroMainImgBox>
                 <HeroContactLinks>
                     <li>
-                        <a>
+                        <a href="tel:0760956918">
                             <Icon
                                 hovercolor="#7c2d24"
                                 color={'#626262'}
@@ -241,7 +241,7 @@ function HeroSectionHome({ children }) {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="mailto:raadmnstrts.office@gmail.com">
                             <Icon
                                 hovercolor="#7c2d24"
                                 color={'#626262'}

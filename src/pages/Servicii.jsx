@@ -149,7 +149,10 @@ function Servicii() {
             <Row $type="horizontal" $justifycontent="center">
                 <Heading as="h3">
                     Servicii
-                    <StyledLine src="/assets/underline_straight.png"></StyledLine>
+                    <StyledLine
+                        alt="Linie dreapta pentru accent"
+                        src="/assets/underline_straight.png"
+                    ></StyledLine>
                 </Heading>
             </Row>
             <Accordion>
