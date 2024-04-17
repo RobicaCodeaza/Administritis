@@ -272,7 +272,7 @@ function Footer() {
                     </ContactDetails>
                     <FooterContactLinks>
                         <li>
-                            <a href="tel:0760956918">
+                            <a href="tel:0760956918" aria-label="Link to phone">
                                 <Icon
                                     hovercolor="#fbada3"
                                     color={'#fddeda'}
@@ -283,7 +283,10 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:raadmnstrts.office@gmail.com">
+                            <a
+                                href="mailto:raadmnstrts.office@gmail.com"
+                                aria-label="Link to mail"
+                            >
                                 <Icon
                                     hovercolor="#fbada3"
                                     color={'#fddeda'}
@@ -294,7 +297,7 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a aria-label="Link to instagram">
                                 <Icon
                                     color={'#fddeda'}
                                     hovercolor="#fbada3"
@@ -305,7 +308,7 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a aria-label="Link to facebook">
                                 <Icon
                                     color={'#fddeda'}
                                     hovercolor="#fbada3"
