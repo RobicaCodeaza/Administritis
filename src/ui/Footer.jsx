@@ -265,10 +265,10 @@ function Footer() {
             <StyledGrid>
                 <ContactRow>
                     <ContactDetails>
-                        <span>R&A Administritis</span>
-                        <span>raadmnstrts.office@gmail.com</span>
-                        <span>Telefon: 0760956918</span>
-                        <span>Bucuresti,Sector 3</span>
+                        <li>R&A Administritis</li>
+                        <li>raadmnstrts.office@gmail.com</li>
+                        <li>Telefon: 0760956918</li>
+                        <li>Bucuresti,Sector 3</li>
                     </ContactDetails>
                     <FooterContactLinks>
                         <li>
