@@ -84,6 +84,10 @@ const StyledLink = styled(Link)`
         /* background-color: #201658; */
         /* color: var(--color-primary-light--2); */
 
+        @media (max-width: 600px) {
+            font-size: 1.6rem;
+        }
+
         &::before {
             content: '';
             display: block;
@@ -126,7 +130,9 @@ const StyledNoLink = styled.a`
         position: relative;
         text-transform: uppercase;
         letter-spacing: 1px;
-
+        @media (max-width: 600px) {
+            font-size: 1.6rem;
+        }
         &::before {
             content: '';
             display: block;
@@ -169,7 +175,9 @@ const StyledNoHref = styled.span`
         position: relative;
         text-transform: uppercase;
         letter-spacing: 1px;
-
+        @media (max-width: 600px) {
+            font-size: 1.6rem;
+        }
         &::before {
             content: '';
             display: block;
