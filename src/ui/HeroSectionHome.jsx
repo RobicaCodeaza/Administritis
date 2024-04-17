@@ -230,7 +230,7 @@ function HeroSectionHome({ children }) {
                 </HeroMainImgBox>
                 <HeroContactLinks>
                     <li>
-                        <a href="tel:0760956918">
+                        <a href="tel:0760956918" aria-label="Call link">
                             <Icon
                                 hovercolor="#7c2d24"
                                 color={'#626262'}
@@ -241,7 +241,10 @@ function HeroSectionHome({ children }) {
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:raadmnstrts.office@gmail.com">
+                        <a
+                            href="mailto:raadmnstrts.office@gmail.com"
+                            aria-label="Mail Link"
+                        >
                             <Icon
                                 hovercolor="#7c2d24"
                                 color={'#626262'}
@@ -252,14 +255,14 @@ function HeroSectionHome({ children }) {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a aria-label="Instagram Link">
                             <Icon color={'#626262'} hovercolor="#7c2d24">
                                 <IoLogoInstagram></IoLogoInstagram>
                             </Icon>
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a aria-label="Facebook Link">
                             <Icon
                                 color={'#626262'}
                                 hovercolor="#7c2d24"

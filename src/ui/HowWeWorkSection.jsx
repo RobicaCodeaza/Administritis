@@ -23,7 +23,7 @@ const StepList = styled.ul`
     gap: 4.4rem;
 `
 
-const StepItem = styled.div`
+const StepItem = styled.li`
     position: relative;
     display: flex;
     gap: 2.4rem;

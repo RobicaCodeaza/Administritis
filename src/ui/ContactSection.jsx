@@ -18,7 +18,7 @@ const ContactCard = styled.div`
     border-radius: 0.5rem;
     overflow: hidden;
     background-size: cover;
-    background-image: url('../../public/assets/pattern2.png');
+    background-image: url('/assets/pattern2.png');
     box-shadow: 1rem 1rem 2rem 0 var(--shadow-lightest);
 
     @media (max-width: 850px) {
