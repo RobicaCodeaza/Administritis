@@ -14,7 +14,7 @@ const StyledServicii = styled.div`
     padding: 14rem 0;
     border-top: 2px solid var(--color-primary-light--1);
     background-color: var(--color-white);
-    min-height: 90dvh;
+    min-height: 100vh;
 `
 const Accordion = styled.div`
     margin-top: 1.2rem;
@@ -60,6 +60,10 @@ const AccordionItem = styled.li`
     &.active {
         color: var(--color-white);
         background-color: var(--color-accent1);
+
+        svg {
+            color: #e8e6f3;
+        }
     }
 `
 

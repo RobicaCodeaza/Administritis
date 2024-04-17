@@ -5,7 +5,7 @@ import {
     IoLogoInstagram,
     IoLogoFacebook,
 } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import heroMain from '/assets/heroMain.jpg'
 import Heading from './Heading.jsx'
@@ -185,8 +185,6 @@ function HeroSectionHome({ children }) {
                 const [entry] = entries
                 if (!entry.isIntersecting) nav.classList.add('sticky')
                 else nav.classList.remove('sticky')
-
-                
             }
 
             const heroObserver = new IntersectionObserver(revealMenu, {

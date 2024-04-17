@@ -20,6 +20,7 @@ const sizes = {
 
 const Row = styled.div`
     display: flex;
+    margin: ${(props) => props.$margin};
     ${(props) =>
         props.$justifycontent !== '' &&
         css`
@@ -30,19 +31,18 @@ const Row = styled.div`
         css`
             justify-items: ${(props) => props.$justify};
         `}
-
-  ${(props) =>
+        ${(props) =>
         props.$align !== '' &&
         css`
             /* flex-wrap: nowrap; */
             align-items: ${(props) => props.$align};
         `}
-  ${(props) =>
+        ${(props) =>
         props.$aligncontent !== '' &&
         css`
             align-content: ${(props) => props.$aligncontent};
         `}
-  ${(props) => sizes[props.$size]};
+        ${(props) => sizes[props.$size]};
     ${(props) =>
         props.$type === 'horizontal' &&
         css`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { RiMenu5Fill, RiMenuFill } from 'react-icons/ri'
 
 import Logo from './Logo.jsx'
@@ -172,13 +172,22 @@ const ToggleMenu = styled.button`
 function Header({ children }) {
     const mediaPhone = useMediaQueryResize(phone)
     const [menuActive, setMenuActive] = useState(false)
+    const { pathname: path } = useLocation()
+    const nav = useRef(null)
+
+    useEffect(
+        function () {
+            if (path !== '/') nav.current.classList.add('sticky')
+        },
+        [path]
+    )
 
     function handleToggle() {
         setMenuActive((active) => !active)
     }
 
     return (
-        <StyledHeader id="nav">
+        <StyledHeader id="nav" ref={nav}>
             <Logo></Logo>
             <StyledNav>
                 {mediaPhone ? (
