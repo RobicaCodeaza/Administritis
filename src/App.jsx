@@ -5,6 +5,7 @@ import Documente from './pages/Documente'
 import GlobalStyles from './styles/GlobalStyles'
 import AppLayout from './ui/AppLayout'
 import { Toaster } from 'react-hot-toast'
+import ScrollToTop from './ui/ScrollToTop.jsx'
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
             ></Toaster>
             <GlobalStyles></GlobalStyles>
             <BrowserRouter>
+                <ScrollToTop></ScrollToTop>
                 <Routes>
                     <Route element={<AppLayout></AppLayout>}>
                         <Route index element={<Home></Home>}></Route>

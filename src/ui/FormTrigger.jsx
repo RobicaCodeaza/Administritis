@@ -76,7 +76,7 @@ function FormTrigger({ children }) {
                         error={errors?.name?.message}
                     >
                         <input
-                            className="border-accent2 text-primrayDark border-2 border-solid border-greyLight bg-primaryLight px-4 py-2 text-[16px] text-primaryDark  accent-colorAccent2  focus:outline-none focus:ring focus:ring-colorAccent2 focus:ring-offset-1"
+                            className="border-accent2 border-2 border-solid border-greyLight bg-primaryLight px-4 py-2 text-[16px]  text-primaryDark  accent-colorAccent2  focus:outline-none focus:ring focus:ring-colorAccent2 focus:ring-offset-1"
                             type="text"
                             id="name"
                             placeholder="ex: Popescu Gabriel"

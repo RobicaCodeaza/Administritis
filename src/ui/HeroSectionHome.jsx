@@ -167,7 +167,7 @@ const HeroContactLinks = styled.ul`
     }
 `
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
     display: block;
 `
 

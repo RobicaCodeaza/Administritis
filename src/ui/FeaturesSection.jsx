@@ -13,6 +13,7 @@ import { GiReceiveMoney } from 'react-icons/gi'
 import { VscTools } from 'react-icons/vsc'
 import { Button } from './Button.jsx'
 import { useEffect, useRef } from 'react'
+import { StyledLink } from './HeroSectionHome.jsx'
 
 const StyledFeaturesSection = styled.div`
     padding: 14rem 0rem;
@@ -250,9 +251,11 @@ function FeaturesSection() {
                                 </FeatureDescription>
                             </FeaturesBox>
                         </FeaturesContainer>
-                        <Button $variation="secondary" to="servicii">
-                            Mai multe detalii
-                        </Button>
+                        <StyledLink to="servicii">
+                            <Button $variation="secondary">
+                                Mai multe detalii
+                            </Button>
+                        </StyledLink>
                     </Row>
                     <FeaturesPhoto
                         src={featuresPhoto}
