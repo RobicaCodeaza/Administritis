@@ -326,6 +326,7 @@ function Header({ children }) {
                             <StyledNoLink
                                 href="https://www.e-bloc.ro"
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 Avizier
                             </StyledNoLink>
