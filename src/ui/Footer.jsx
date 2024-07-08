@@ -318,6 +318,22 @@ function Footer() {
                                 </Icon>
                             </a>
                         </li>
+                        <li>
+                            <div
+                                class="fb-share-button"
+                                data-href="https://developers.facebook.com/docs/plugins/"
+                                data-layout=""
+                                data-size=""
+                            >
+                                <a
+                                    target="_blank"
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                                    className="fb-xfbml-parse-ignore"
+                                >
+                                    Share
+                                </a>
+                            </div>
+                        </li>
                     </FooterContactLinks>
                 </ContactRow>
                 <OtherServices>
