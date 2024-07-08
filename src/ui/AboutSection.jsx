@@ -91,7 +91,7 @@ function AboutSection() {
                 <Grid columns="1fr 1fr" margin="0 0 4.8rem 0" gap="0 4.4rem">
                     <Row $size="tiny">
                         <Heading as="h4" variation="accent">
-                            Scopul
+                            Scopul | Promptitudine in Servicii
                         </Heading>
                         <Heading as="h2">
                             De ce sa ne alegi pe noi?
@@ -102,10 +102,9 @@ function AboutSection() {
                         </Heading>
                     </Row>
                     <AboutDescription>
-                        Serviciile noastre de administrare a imobilelor se
-                        desfasoara in Sectoarele 3,4 si 5 si se concentreaza pe
-                        eficienta costurilor, promptitudinea si siguranta
-                        serviciilor.
+                        Serviciile noastre de administrare imobile se desfasoara
+                        in Sectoarele 3,4 si 5 si se concentreaza pe eficienta
+                        costurilor, promptitudinea si siguranta serviciilor.
                     </AboutDescription>
                 </Grid>
                 <Grid columns="1fr 1fr" gap="0 4.4rem">
