@@ -297,6 +297,7 @@ function Header({ children }) {
                                     href="https://www.e-bloc.ro"
                                     target="_blank"
                                     onClick={handleToggle}
+                                    rel="noreferrer"
                                 >
                                     Avizier
                                 </StyledNoLink>

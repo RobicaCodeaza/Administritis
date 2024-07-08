@@ -272,7 +272,11 @@ function Footer() {
                     </ContactDetails>
                     <FooterContactLinks>
                         <li>
-                            <a href="tel:0760956918" aria-label="Link to phone">
+                            <a
+                                href="tel:0760956918"
+                                aria-label="Link to phone"
+                                rel="noreferrer"
+                            >
                                 <Icon
                                     hovercolor="#fbada3"
                                     color={'#fddeda'}
@@ -286,6 +290,7 @@ function Footer() {
                             <a
                                 href="mailto:raadmnstrts.office@gmail.com"
                                 aria-label="Link to mail"
+                                rel="noreferrer"
                             >
                                 <Icon
                                     hovercolor="#fbada3"
@@ -329,6 +334,7 @@ function Footer() {
                                     target="_blank"
                                     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
                                     className="fb-xfbml-parse-ignore"
+                                    rel="noreferrer"
                                 >
                                     Share
                                 </a>
@@ -341,9 +347,15 @@ function Footer() {
                     <StyledLink to="servicii">Servicii</StyledLink>
                     <StyledLink to="documente">Documente utile</StyledLink>
                     <FormTrigger>
-                        <StyledNoHref href="">Contact</StyledNoHref>
+                        <StyledNoHref href="" rel="noreferrer">
+                            Contact
+                        </StyledNoHref>
                     </FormTrigger>
-                    <StyledNoLink href="https://www.e-bloc.ro" target="_blank">
+                    <StyledNoLink
+                        href="https://www.e-bloc.ro"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         Avizier
                     </StyledNoLink>
                     <StyledLink onClick={() => goTo('colaborare')}>
