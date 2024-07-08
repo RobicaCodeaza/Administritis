@@ -320,7 +320,7 @@ function Footer() {
                         </li>
                         <li>
                             <div
-                                class="fb-share-button"
+                                className="fb-share-button"
                                 data-href="https://developers.facebook.com/docs/plugins/"
                                 data-layout=""
                                 data-size=""
