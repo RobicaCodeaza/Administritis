@@ -7,7 +7,7 @@ import {
 } from 'react-icons/io5'
 import { Link, useLocation } from 'react-router-dom'
 
-import heroMain from '/assets/heroMain.jpg'
+import heroMain from '/assets/heroMain.webp'
 import Heading from './Heading.jsx'
 import { Button, ButtonTrigger } from './Button.jsx'
 import Icon from './Icon.jsx'
@@ -26,7 +26,7 @@ const StyledHeroSection = styled.div`
 const HeroSectionLeft = styled.div`
     flex: 0 1 65%;
     padding: 6vw 13vw 6vw 9.6vw;
-    background-image: url('/assets/heroPic.jpg');
+    background-image: url('/assets/heroPic.webp');
     position: relative;
     background-size: cover;
 

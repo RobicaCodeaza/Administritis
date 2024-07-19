@@ -3,7 +3,7 @@ import Grid from './Grid.jsx'
 import Row from './Row.jsx'
 import Heading from './Heading.jsx'
 import Container from './Container.jsx'
-import featuresPhoto from '/assets/features.jpg'
+import featuresPhoto from '/assets/features.webp'
 import IconBackground from './IconBackground.jsx'
 import Icon from './Icon.jsx'
 
@@ -140,7 +140,7 @@ function FeaturesSection() {
                                 Ceea ce oferim
                                 <StyledLine
                                     alt="Linie curbata pentru accent"
-                                    src="/assets/underline_curved.png"
+                                    src="/assets/underline_curved.webp"
                                 ></StyledLine>
                             </Heading>
                         </Row>

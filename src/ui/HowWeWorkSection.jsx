@@ -3,10 +3,10 @@ import Container from './Container.jsx'
 import Grid from './Grid.jsx'
 import Heading from './Heading.jsx'
 import Row from './Row.jsx'
-import photo1 from '/assets/intalnire.jpg'
-import photo2 from '/assets/elaborare.jpg'
-import photo3 from '/assets/implementare.jpg'
-import photo4 from '/assets/monitorizare.jpg'
+import photo1 from '/assets/intalnire.webp'
+import photo2 from '/assets/elaborare.webp'
+import photo3 from '/assets/implementare.webp'
+import photo4 from '/assets/monitorizare.webp'
 import useMediaQueryResize, { phone } from '../hooks/useMediaQuery.js'
 import { useEffect, useRef } from 'react'
 
@@ -177,7 +177,7 @@ function HowWeWorkSection() {
                         <Heading as="h2">
                             Cum vom comunica
                             <StyledLine
-                                src="/assets/underline_curved.png"
+                                src="/assets/underline_curved.webp"
                                 alt="Linie curbata pentru accent"
                             ></StyledLine>
                         </Heading>

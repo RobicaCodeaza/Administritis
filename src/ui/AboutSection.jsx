@@ -3,7 +3,7 @@ import Container from './Container.jsx'
 import Heading from './Heading.jsx'
 import Row from './Row.jsx'
 import Grid from './Grid.jsx'
-import aboutPhoto from '/assets/aboutUs.jpg'
+import aboutPhoto from '/assets/aboutUs.webp'
 
 import { GrOptimize, GrSecure } from 'react-icons/gr'
 import { TiCloudStorageOutline } from 'react-icons/ti'
@@ -97,7 +97,7 @@ function AboutSection() {
                             De ce sa ne alegi pe noi?
                             <StyledLine
                                 alt="Linie curbata pentru accent"
-                                src="/assets/underline_curved.png"
+                                src="/assets/underline_curved.webp"
                             ></StyledLine>
                         </Heading>
                     </Row>

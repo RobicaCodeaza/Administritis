@@ -151,7 +151,7 @@ function Servicii() {
                     Servicii
                     <StyledLine
                         alt="Linie dreapta pentru accent"
-                        src="/assets/underline_straight.png"
+                        src="/assets/underline_straight.webp"
                     ></StyledLine>
                 </Heading>
             </Row>
