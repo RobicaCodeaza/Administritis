@@ -266,7 +266,9 @@ function Footer() {
                 <ContactRow>
                     <ContactDetails>
                         <li>R&A Administritis</li>
-                        <li>raadmnstrts.office@gmail.com</li>
+                        <li>
+                            <a href="raadmnstrts.office@gmail.com">Mail Us</a>
+                        </li>
                         <li>Telefon: 0760956918</li>
                         <li>Bucuresti,Sector 3</li>
                     </ContactDetails>
